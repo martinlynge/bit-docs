@@ -1,0 +1,38 @@
+---
+id: cli-build
+title: Build
+permalink: docs/cli-build.html
+layout: docs
+category: CLI Reference
+---
+Builds a component (or all the project's components) with the configured compiler (in [bit.json file](/docs/conf-bit-json.html)).
+
+## Synopsis
+
+```bash
+bit build [-v|--verbose] [id]
+```
+
+## Examples
+
+Build a single component by specifying a component id:
+
+```bash
+bit build foo/bar
+```
+
+Build all components by not specifying a component id:
+
+```bash
+bit build
+```
+
+## Options
+
+**-v, --verbose**
+
+Shows npm verbose output for inspection.
+
+```bash
+bit build foo/bar --verbose
+```

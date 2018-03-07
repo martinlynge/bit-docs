@@ -1,0 +1,116 @@
+- title: Getting Started
+  items:
+    - id: quick-start
+      title: Quick Start
+  # - id: what-is-bit
+  #    title: What is Bit?
+    - id: installation
+      title: Installation
+    - id: initializing-bit
+      title: Initializing Bit
+    - id: isolating-and-tracking-components
+      title: Isolating and Tracking Components
+    - id: versioning-tracked-components
+      title: Versioning Tracked Components
+    - id: organizing-components-in-scopes
+      title: Organizing Components in Scopes
+    - id: installing-components-using-package-managers
+      title: Installing Components using Package Managers
+    - id: importing-components
+      title: Importing Components
+    - id: updating-sourced-components
+      title: Updating Sourced Components
+    - id: building-components
+      title: Building Components
+    - id: testing-components
+      title: Testing Components
+    - id: removing-components
+      title: Removing Components
+    - id: documenting-components
+      title: Documenting Components
+- title: Extending Bit
+  items:
+    - id: ext-concepts
+      title: Concepts
+    - id: ext-using-extensions
+      title: Using Extensions
+    - id: ext-developing-extensions
+      title: Devloping Extensions
+    - id: ext-compiling
+      title: Compiling
+    - id: ext-testing
+      title: Testing
+- title: Configuring Bit
+  items:
+    - id: conf-bit-json
+      title: bit.json
+    - id: conf-bit-on-the-server
+      title: Bit on the Server      
+    - id: conf-config
+      title: Config
+- title: Troubleshooting
+  items:
+    - id: latest-version
+      title: Install the Latest Stable Version of Bit
+    - id: authentication-issues
+      title: CLI Authentication Issues
+    - id: install-components
+      title: Installing Components
+    - id: clearing-bit-cache
+      title: Clearing the Bit Cache
+    - id: logs
+      title: Checking Bit's logs
+- title: bitsrc.io
+  items:
+    - id: bitsrc-component-ci
+      title: Component CI
+    - id: setup-authentication
+      title: Setup Authentication
+    - id: my-account
+      title: My account
+    - id: scopes-on-bitsrc
+      title: Scopes on bitsrc.io
+- title: CLI Reference
+  items:
+    - id: cli-add
+      title: add
+    - id: cli-build
+      title: build
+    - id: cli-clear-cache
+      title: clear-cache
+    - id: cli-config
+      title: config
+    - id: cli-deprecate
+      title: deprecate
+    - id: cli-export
+      title: export
+    - id: cli-import
+      title: import
+    - id: cli-install
+      title: install
+    - id: cli-init
+      title: init
+    - id: cli-link
+      title: link
+    - id: cli-list
+      title: list
+    - id: cli-log
+      title: log
+    - id: cli-move
+      title: move
+    - id: cli-remote
+      title: remote
+    - id: cli-remove
+      title: remove
+    - id: cli-show
+      title: show
+    - id: cli-status
+      title: status      
+    - id: cli-tag
+      title: tag
+    - id: cli-test
+      title: test
+    - id: cli-untag
+      title: untag
+    - id: cli-untrack
+      title: untrack

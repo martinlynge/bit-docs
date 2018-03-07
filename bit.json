@@ -1,0 +1,11 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {
+        "itaymendel.bit-docs/content/docs": "0.0.1"
+    },
+    "componentsDefaultDirectory": "{namespace}/{name}",
+    "packageManager": "npm"
+}

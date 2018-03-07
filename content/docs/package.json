@@ -1,0 +1,10 @@
+{
+  "name": "@bit/itaymendel.bit-docs.content.docs",
+  "version": "0.0.1",
+  "homepage": "https://bitsrc.io/itaymendel/bit-docs/content/docs",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "license": "SEE LICENSE IN LICENSE"
+}
