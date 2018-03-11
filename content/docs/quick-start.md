@@ -9,7 +9,7 @@ next: installation.html
 ---
 Learn how to use Bit in a few simple steps.
 
-These simple steps will teach you the basics you need to know for working with Bit, all the way from sharing components right from your project to using them in any other project with your favorite tools.
+These simple steps will teach you the basics you need to know for working with Bit, all the way from sharing components right from your project to using them in any other project with your favorite tools.  
 When finished, you will also have a beautiful gallery of components ready to share with your team.
 
 Let's get started with these 4 quick steps:

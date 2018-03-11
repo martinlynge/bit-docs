@@ -1,0 +1,18 @@
+- title: Community Resources
+  items:
+    - id: support
+      title: Support
+    - id: videos
+      title: Videos
+    - id: examples
+      title: Examples
+    - id: articles
+      title: Articles
+
+- title: Extensions and plugins
+  items:
+    - id: compilers
+      title: Compilers
+    - id: testers
+      title: Testers
+    

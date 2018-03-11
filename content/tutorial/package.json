@@ -1,7 +1,7 @@
 {
-  "name": "@bit/bit.docs.content.docs",
+  "name": "@bit/bit.docs.content.tutorial",
   "version": "0.0.1",
-  "homepage": "https://bitsrc.io/bit/docs/content/docs",
+  "homepage": "https://bitsrc.io/bit/docs/content/tutorial",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},

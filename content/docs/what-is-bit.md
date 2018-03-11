@@ -67,7 +67,7 @@ Guidelines for building components were wonderfully described by Addy Osmani in 
 
 More information on component design can be found at the [external resources] (/community/external-resources.html) section.
 
-### What is a Scope (collection)?
+### What is a Scope (component collection)?
 
 A `Scope` is a dynamic collection of components. 
 

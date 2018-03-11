@@ -1,7 +1,7 @@
 {
-  "name": "@bit/bit.docs.content.docs",
+  "name": "@bit/bit.docs.content.community",
   "version": "0.0.1",
-  "homepage": "https://bitsrc.io/bit/docs/content/docs",
+  "homepage": "https://bitsrc.io/bit/docs/content/community",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},

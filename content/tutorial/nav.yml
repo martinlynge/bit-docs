@@ -1,0 +1,126 @@
+- title: Sharing React Components with Bit
+  items:
+    - id: before-we-start
+      title: Before We Start
+      href: /tutorial/react-tutorial.html#before-we-start
+      forceInternal: true
+      subitems:
+        - id: in-this-tutorial-youll-learn
+          title: In this tutorial
+          href: /tutorial/react-tutorial.html#in-this-tutorial-youll-learn
+          forceInternal: true
+        - id: prerequisites
+          title: Prerequisites
+          href: /tutorial/react-tutorial.html#prerequisites
+          forceInternal: true
+        - id: getting-started
+          title: Getting Started
+          href: /tutorial/react-tutorial.html#getting-started
+          forceInternal: true
+    - id: add-export--share-components
+      title: Add, Export & Share
+      href: /tutorial/react-tutorial.html#add-export--share-components
+      forceInternal: true
+      subitems:
+        - id: initializing-bit
+          title: Initializing Bit
+          href: tutorial/react-tutorial.html#initializing-bit-on-your-project
+          forceInternal: true
+        - id: add--track-with-bit
+          title: Add & Track with Bit
+          href: tutorial/react-tutorial.html#add--track-with-bit
+          forceInternal: true
+        - id: add-build-environment
+          title: Add build environment
+          href: /tutorial/react-tutorial.html#add-build-environment
+          forceInternal: true
+          subitems:
+            - id: why--what-are-build-environments
+              title: What are Build envronments
+              href: /tutorial/react-tutorial.html#why--what-are-build-environments
+              forceInternal: true
+            - id: add-a-build-environment-to-a-component
+              title: Add a Build environment to a component
+              href: /tutorial/react-tutorial.html#add-a-build-environment-to-a-component
+              forceInternal: true
+            - id: build-your-component
+              title: Build your component
+              href: /tutorial/react-tutorial.html#build-your-component
+              forceInternal: true
+        - id: lock-your-react-component-version
+          title: Lock your component version
+          href: /tutorial/react-tutorial.html#lock-your-react-component-version
+          forceInternal: true
+        - id: create-a-scope-on-bitsrcio
+          title: Create a Scope
+          href: /tutorial/react-tutorial.html#create-a-scope-on-bitsrcio
+          forceInternal: true   
+        - id: export-your-react-component-to-bitsrcio
+          title: Export component to bitsrc.io
+          href: /tutorial/react-tutorial.html#export-your-react-component-to-bitsrcio
+          forceInternal: true 
+    - id: install--use-components
+      title: Install & Use Components
+      href: /tutorial/react-tutorial.html#install--use-components
+      forceInternal: true
+      subitems:
+        - id: install-your-react-component
+          title: Install your component
+          href: /tutorial/react-tutorial.html#install-your-react-component
+          forceInternal: true
+        - id: configure-bitsrcio-as-a-scoped-registry
+          title: Configure bitsrc.io as a Scoped Registry
+          href: /tutorial/react-tutorial.html#configure-bitsrcio-as-a-scoped-registry
+          forceInternal: true
+        - id: use-in-your-project
+          title: Use in your project
+          href: /tutorial/react-tutorial.html#use-in-your-project
+          forceInternal: true
+    - id: modify-components
+      title: Modify Components
+      href: /tutorial/react-tutorial.html#modify-components
+      forceInternal: true
+      subitems:
+        - id: initialize-bit-in-the-consuming-project
+          title: Initialize Bit in the consuming project
+          href: /tutorial/react-tutorial.html#initialize-bit-in-the-consuming-project
+          forceInternal: true
+        - id: import-component-to-your-project
+          title: Import the component
+          href: /tutorial/react-tutorial.html#import-the-component-to-your-project
+          forceInternal: true
+          subitems:
+            - id: how-does-it-work
+              title: How does it work
+              href: /tutorial/react-tutorial.html#how-does-it-work
+              forceInternal: true
+        - id: modify-an-imported-component
+          title: Modify an imported component
+          href: /tutorial/react-tutorial.html#modify-an-imported-component
+          forceInternal: true
+          subitems:
+              - id: build-our-dist-files-to-reflect-the-changes-in-our-source-code
+                title: Rebuild dist files
+                href: /tutorial/react-tutorial.html#build-our-dist-files-to-reflect-the-changes-in-our-source-code
+                forceInternal: true
+        - id: lock-version--export-to-bitsrcio
+          title: Lock version & export
+          href: /tutorial/react-tutorial.html#lock-version--export-to-bitsrcio
+          forceInternal: true
+        - id: export-component-new-version
+          title: Export component new version 
+          href: /tutorial/react-tutorial.html#export-component-new-version
+          forceInternal: true
+    - id: import-updated-component
+      title: Import updated component 
+      href: /tutorial/react-tutorial.html#import-updated-component
+      forceInternal: true
+      subitems:
+        - id: consume-updated-component
+          title: Update a sourced component
+          href: /tutorial/react-tutorial.html#consume-updated-component
+          forceInternal: true
+    - id: wrapping-up
+      title: wrapping up
+      href: /tutorial/react-tutorial.html#wrapping-up
+      forceInternal: true
