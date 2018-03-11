@@ -4,7 +4,7 @@
         "tester": "none"
     },
     "dependencies": {
-        "bit.docs/content/tutorial": "0.0.1",
+        "bit.docs/content/tutorial": "0.0.2",
         "bit.docs/content/community": "0.0.1",
         "bit.docs/content/docs": "0.0.1"
     },

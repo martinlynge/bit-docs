@@ -11,7 +11,7 @@ Here is [an example](https://bitsrc.io/bit/movie-app) of a React [component coll
 
 ## Before We Start
 
-### In this tutorial you'll learn:
+### In this tutorial you'll learn
 
 - How to share a React component from one project's repository to a diffrent project using Bit.
 - How to integrate building tools into a React component.
@@ -43,7 +43,7 @@ Please see [Set up SSH authentication to bitsrc.io](/docs/setup-authentication.h
 
 > **Note**
 >
-> [bitsrc.io](https://bitsrc.io) is the free community hub for Bit. You can host and manage your components and Scope permissions, view useful information such as docs, test results and live rendering for React components. 
+> [bitsrc.io](https://bitsrc.io) is the free community hub for Bit. You can host and manage your components and Scope permissions, view useful information such as docs, test results and live rendering for React components.
 It's free for open source, and always will be.
 
 ## Getting Started
@@ -130,7 +130,7 @@ Use the [bit status](/docs/cli-status.html) command as often as you’d like to 
 
 ### Add Build environment
 
-***Why & What are Build environments*** 
+#### Why & What are Build environments
 
 To use React components you need to compile your code so it can run on a browser.
 Build environment is a 'build task' for a component so that Bit can then run and compile it. Bit has multiple build environments that you can use, all environments are hosted on [bitsrc.io](https://bitsrc.io) as Bit components in a [Scope called "envs"](https://bitsrc.io/bit/envs).
@@ -225,7 +225,7 @@ $ bit export wonderwoman.wonderbit
 exported 1 components to scope wonderwoman.wonderbit
 ```
 
-Once the you exported the component, you can see it on your Scope on [bitsrc.io](https://bitsrc.io). 
+Once the you exported the component, you can see it on your Scope on [bitsrc.io](https://bitsrc.io).
 
 If you [check status](/docs/cli-status.html), you can see the component is not displayed.
 Bit has created a copy of the component, along with all its dependencies, the component is now hosted in your remote Scope.
@@ -256,7 +256,7 @@ Go to your [bitsrc.io](https://bitsrc.io) profile to view  your Scope and the ex
 
 ## Install & Use Components
 
-***Consume Components Using Package Managers***
+#### Consume Components Using Package Managers
 
 Learn more about [Installing Components using Package Managers](/docs/installing-components-using-package-managers.html)
 
@@ -337,7 +337,7 @@ You can see the button component rendered in your project.
 
 ## Modify Components
 
-You can modify the imported React component (`ui/button`) in the consuming project located localy (in thus tutorial the `import-button` project), and export it back to the remote scope.
+You can modify the imported React component (`ui/button`) in the consuming project located locally (in thus tutorial the `import-button` project), and export it back to the remote scope.
 
 ### Initialize Bit in the consuming project
 
@@ -376,7 +376,7 @@ Open your code editor to view the updated source tree. In your tree you can see 
 >
 > To configure the way your project workspace handles imported component's `dist` files, dependencies and packages, please see [here](https://docs.bitsrc.io/docs/conf-bit-json.html).
 
-**How Does it Work?**
+#### How Does it Work
 
 After installing a component using npm, use the command `bit import` in your code. Bit identifies the imported component as a `bit component` and replace the component's node module with a symlink to the location of the sourced component.
 
@@ -406,9 +406,9 @@ npm start
 
 Changes are not updated on your browser, yet.
 
-**Build your "dist" files to reflect the changes in your source code**
- 
-When modifying an imported component with a build environment, changes you make are not immedietly updated, since Bit links your code to the component's `dist` directory and **not** to the source code. To update the component's `dist` rebuild the component using the [bit build](/docs/cli-build.html) command:
+#### Build your "dist" files to reflect the changes in your source code
+
+When modifying an imported component with a build environment, changes you make are not immediately updated, since Bit links your code to the component's `dist` directory and **not** to the source code. To update the component's `dist` rebuild the component using the [bit build](/docs/cli-build.html) command:
 
 ```bash
 $ bit build
@@ -455,7 +455,7 @@ $ bit tag --all --patch
 added components:  ui/button
 ```
 
-### Export component new version 
+### Export component new version
 
 To export the component new version, use the `bit export` command again, but now add the flag `--eject`. This flag allowes  Bit to replace the component node module with the exported version, so that your project will have less code and clutter.
 
@@ -467,7 +467,7 @@ Open your IDE and see that the component is no longer a part of it, and was adde
 
  Check your Scope in [bitsrc.io](https://bitsrc.io), you can see that there is a new version for the React component.
 
-## Import updated component 
+## Import updated component
 
 Now you can use the updated React component, and import it in to the `import-button` project. By doing so, you will receive the updates exported to the remote Scope into your local project as well.
 
@@ -502,8 +502,8 @@ In this tutorial you’ve learned how to:
 - Add a [build](/docs/building-components.html) task to a React component
 - Update components in your remote [Scope](/docs/scopes-on-bitsrc.html#scopes) on [bitsrc.io](https://bitsrc.io)
 - Install a component using a [Package Managers](/docs/installing-components-using-package-managers.html)
-- Source a component so you can update it in diffrent project
-  -  Change a React component from the consuming project
+- Source a component so you can update it in different project
+  - Change a React component from the consuming project
   - Build a component to reflect source code changes
   - Export a component to update the remote [Scope](/docs/scopes-on-bitsrc.html#scopes) on [bitsrc.io](https://bitsrc.io)
 - Update a source component using Bit
