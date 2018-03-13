@@ -380,7 +380,7 @@ Open your code editor to view the updated source tree. In your tree you can see 
 
 After installing a component using npm, use the command `bit import` in your code. Bit identifies the imported component as a `bit component` and replace the component's node module with a symlink to the location of the sourced component.
 
-In your code, when using nude module, you use an absolute `import` statement. Once importing components using Bit, Bit replaces the node module with a symlink to the sourced component.
+In your code, when using node module, you use an absolute `import` statement. Once importing components using Bit, Bit replaces the node module with a symlink to the sourced component.
 
 Your `import` statement now refers to the sourced component. Every time you use `bit import` in a project, Bit will create a symlink to the component in your node modules directory. You can use absolute `import` statement to use sourced components.
 
