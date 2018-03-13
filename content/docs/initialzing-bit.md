@@ -38,7 +38,7 @@ This file should be tracked and managed by your SCM, alongside your project.
 
 > **Tip**
 >
-> To learn more about the different configurations available in `bit.json`, please visit [bit.json](/docs/conf-bit-json.html) documentation page.
+> To learn more about the different configurations available in `bit.json`, please see [bit.json](/docs/conf-bit-json.html) documentation page.
 
 ## .bitmap
 

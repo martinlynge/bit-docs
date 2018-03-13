@@ -4,7 +4,7 @@ title: Removing Components
 permalink: docs/removing-components.html
 layout: docs
 category: Getting Started
-prev: testing-components.html
+prev: rendering-components.html
 next: documenting-components.html
 ---
 

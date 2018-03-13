@@ -108,7 +108,7 @@ added components:  components/button@1.0.0, components/login@1.0.0, components/l
 
 ### Create a Scope
 
-In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and afterward create a Scope. A Scope is a remote Bit workspace that can host and manage components.
+In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and afterward create a Scope. A Scope is a remote Bit directory, simmlar to `git` repository, that can host and manage components.
 
 There is more to learn about [managing components in Scopes](/docs/organizing-components-in-scopes.html). You can check out some example Scopes for **[React components](https://bitsrc.io/bit/movie-app)**.
 

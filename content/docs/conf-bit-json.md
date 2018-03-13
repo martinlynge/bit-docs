@@ -6,7 +6,7 @@ layout: docs
 category: Configuring Bit
 ---
 
-The `bit.json` file is your [scope](/docs/what-is-bit.html#what-is-a-scope-collection)'s configuration file. This document specifies all the different configurations that are set in the file.
+The `bit.json` file is your [scope](/docs/what-is-bit.html#what-is-a-scope-component-collection)'s configuration file. This document specifies all the different configurations that are set in the file.
 
 ## Overview
 

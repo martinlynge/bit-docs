@@ -25,6 +25,8 @@
     - id: testing-components
       title: Testing Components
     - id: removing-components
+      title: Rendering Components
+    - id: rendering-components
       title: Removing Components
     - id: documenting-components
       title: Documenting Components

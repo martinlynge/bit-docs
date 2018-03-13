@@ -7,24 +7,29 @@ permalink: tutorial/react-tutorial.html
 Bit enables you to share and sync source code components between different SCM repositories and projects.
 React is known for its ease in separation and reuse of components, and as such, it's perfect for combining with Bit.
 
-Here is [an example](https://bitsrc.io/bit/movie-app) of a React [component collection (Scope)](/docs/what-is-bit.html#what-is-a-scope-collection) of individually available React components shared from [this GitHub library](https://github.com/itaymendel/movie-app) and ready to be installed and updated from different projects.
+Here is [an example](https://bitsrc.io/bit/movie-app) of a React [Scope](/docs/what-is-bit.html#what-is-a-scope-component-collection) of individually available React components shared from this [GitHub library](https://github.com/itaymendel/movie-app). These components are ready to be installed and updated in different projects.
 
 ## Before We Start
 
 ### In this tutorial you'll learn
 
-- How to share a React component from one project's repository to a diffrent project using Bit.
-- How to integrate building tools into a React component.
-- How to export a React component to a remote [Bit Scope](/docs/scopes-on-bitsrc.html#scopes).
-- How to update your React components using Bit.
+- How to share a React component from one project's repository to a different project using Bit
+- How to integrate building tools into a React component
+- How to export a React component to a remote [Bit Scope](/docs/scopes-on-bitsrc.html#scopes)
+- How to update your React components using Bit
 
 We have created an [example project](https://github.com/teambit/tutorial-react) containing two directories, both created with [create-react-app](https://github.com/facebookincubator/create-react-app).
 
 For this tutorial, each directory represents an individual project.
-We would like to share a single React component between these "projects".
+We would share a single React component between these "projects".
 
 The first project, called **export-button**, contains a React `button.js` component.
 Using Bit, you will share this component and use it in the second project called **import-button**.
+
+> **Note**
+>
+> [bitsrc.io](https://bitsrc.io) is the free community hub for Bit. You can host and manage your components and Scope permissions, view useful information such as docs, test results and live rendering for React components.
+It's free for open source, and always will be.
 
 ### Prerequisites
 
@@ -37,14 +42,9 @@ If you have already installed Bit, please verify the installation by running the
 $ bit --version
 ```
 
-We recommend that after you installed Bit on your computer to sign up and set up an SSH authentication with [bitsrc.io](https://bitsrc.io).
-
-Please see [Set up SSH authentication to bitsrc.io](/docs/setup-authentication.html#set-up-bitsrcio-connectivity)
-
-> **Note**
+> **Tip!** 
 >
-> [bitsrc.io](https://bitsrc.io) is the free community hub for Bit. You can host and manage your components and Scope permissions, view useful information such as docs, test results and live rendering for React components.
-It's free for open source, and always will be.
+> We recommend that after you installed Bit on your computer to sign up and set up an SSH authentication with [bitsrc.io](https://bitsrc.io). Please see [Set up SSH authentication to bitsrc.io](/docs/setup-authentication.html#set-up-bitsrcio-connectivity)
 
 ## Getting Started
 
@@ -55,11 +55,11 @@ $ git clone https://github.com/teambit/tutorial-react.git
 $ cd tutorial-react
 ```
 
-We'll use this example project to demonstrate how to work with Bit.
+We'll use this example project to show you how to work with Bit.
 
 ## Add, Export & Share Components
 
-In the following section, you'll use a React component and share ([export](/docs/cli-export.html)) it to a remote [Scope](/docs/scopes-on-bitsrc.html#scopes) on [bitsrc.io](https://bitsrc.io).
+In the this section, you'll use a React component and share it ([export](/docs/cli-export.html)) to a remote [Scope](/docs/scopes-on-bitsrc.html#scopes) on [bitsrc.io](https://bitsrc.io).
 
 ### Initializing Bit on your project
 
@@ -75,10 +75,10 @@ Now initialize Bit:
 ```bash
 $ bit init
 
-successfully initialized an empty bit Scope.
+successfully initialized an empty bit workspace.
 ```
 
-Congrats! You've just made your first step of using Bit. You can now see the response from Bit in your terminal.
+Congrats! You've just made your first step using Bit. You can now see responses from Bit in your terminal.
 
 > **Note**
 >
@@ -133,16 +133,14 @@ Use the [bit status](/docs/cli-status.html) command as often as you’d like to 
 #### Why & What are Build environments
 
 To use React components you need to compile your code so it can run on a browser.
-Build environment is a 'build task' for a component so that Bit can then run and compile it. Bit has multiple build environments that you can use, all environments are hosted on [bitsrc.io](https://bitsrc.io) as Bit components in a [Scope called "envs"](https://bitsrc.io/bit/envs).
-To learn more please see [build](/docs/building-components.html).
+Build environment is a component 'build task', so that Bit can then run and compile it. Bit has multiple build environments available for use, all are hosted on [bitsrc.io](https://bitsrc.io) as Bit components in a Scope called ["envs"](https://bitsrc.io/bit/envs).
+To learn more please see [build components](/docs/building-components.html). A built component can then be [consumed as a node module](/docs/installing-components-using-package-managers.html) directly from [bitsrc.io](https://bitsrc.io) using npm/yarn (you will do that later on in this tutorial).
 
-A component that has been built can then be [consumed as a node module](/docs/installing-components-using-package-managers.html) directly from [bitsrc.io](https://bitsrc.io) using npm/yarn (you will do that later on in this tutorial).
-
-Since we are using a React component, this component needs to be compiled, in order to do that we will use this [React environment](https://bitsrc.io/bit/envs/compilers/react).
+The React component we are using needs to be compiled, in order to do so, use this [React environment](https://bitsrc.io/bit/envs/compilers/react).
 
 > **Note: Isolated Environment**
 >
-> Bit creates an isolated component environment for each component in your scope, Bit then runs all the build tasks there. This will also happen after exporting components to a remote scope. To learn more see [Isolated Component Environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment)
+> Bit creates an isolated environment for each component in your scope. Bit runs all the component's build tasks there. This will also happen after exporting components to a remote scope. To learn more see [Isolated Component Environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment)
 
 ### Add a Build environment to a component
 
@@ -162,8 +160,9 @@ To build the `ui/button` component, run the bit build command:
 ```bash
 $ bit build ui/button
 
-/Users/../Documents/bit-tutorial-prj/tutorial-react/export-button/dist/src/ui/button.js.map
-/Users/../Documents/bit-tutorial-prj/tutorial-react/export-button/dist/src/ui/button.js
+/Users/../tutorial-react/export-button/dist/src/ui/button.js.map
+/Users/../tutorial-react/export-button/dist/src/ui/button.js
+
 ```
 
 ### Lock your React component version
@@ -176,7 +175,7 @@ If you like it, better put a tag on it!
 $ bit tag ui/button
 
 1 components tagged | 1 added, 0 changed, 0 auto-tagged
-added components:  ui/button
+added components:  ui/button@0.0.1
 ```
 
 After tagging your component, you can check your status:
@@ -204,25 +203,26 @@ no auto-tag pending components
 no deleted components
 ```
 
-You can see that the component is now in the staged area. The components in this area are version locked and ready for export. Before you continue, you should check that you have a [Scope](/docs/scopes-on-bitsrc.html#scopes) ready for the new component you are about to export.
+You can see that the component is now in the staged area. The components in this area are version locked and ready for export. 
+Before you continue, check that you have a [Scope](/docs/scopes-on-bitsrc.html#scopes) ready for the new component you are about to export.
 
 ### Create a Scope on [bitsrc.io](https://bitsrc.io)
 
 In order to export a component, you need to specify a [Scope](/docs/scopes-on-bitsrc.html#scopes) to export your component to.
 
-A [Scope](/docs/scopes-on-bitsrc.html#scopes) is a remote area that you createin order to host and share your components. Other developers can then access your public Scope and use your components. You can view a scope example in the [tutorial project Scope](https://bitsrc.io/odedreuveny/example).
+A [Scope](/docs/scopes-on-bitsrc.html#scopes) is a remote directory that stores, components that you create in order to work, share and track your components. Other developers can then access your public Scope and use your components. You can view a scope example in the [tutorial project Scope](https://bitsrc.io/odedreuveny/example).
 
  To create your own Scope follow [these instructions](/docs/quick-start.html#create-a-scope).
 
 ### Export your React component to [bitsrc.io](https://bitsrc.io)
 
 You can share components from your project to a Scope by using the `bit export` command.
-In this example, our [bitsrc.io](https://bitsrc.io) username is [wonderwoman](https://bitsrc.io/wonderwoman) and the scope is [wonderbit](https://bitsrc.io/wonderwoman/wonderbit):
+In this example, our [bitsrc.io](https://bitsrc.io) username is [wonderwoman](https://bitsrc.io/wonderwoman) and the scope is [diana](https://bitsrc.io/wonderwoman/diana):
 
 ```bash
-$ bit export wonderwoman.wonderbit
+$ bit export wonderwoman.diana
 
-exported 1 components to scope wonderwoman.wonderbit
+exported 1 components to scope wonderwoman.diana
 ```
 
 Once the you exported the component, you can see it on your Scope on [bitsrc.io](https://bitsrc.io).
@@ -282,7 +282,7 @@ $ npm config set @bit:registry https://node.bitsrc.io
 Now you can use npm or yarn in order to install your components.
 
 ```bash
-$ npm install @bit/wonderwoman.wonderbit.ui.button
+$ npm install @bit/wonderwoman.diana.ui.button
 ```
 
 ### Use in your project
@@ -290,7 +290,7 @@ $ npm install @bit/wonderwoman.wonderbit.ui.button
 In your code editor open the `src/App.js` file and add the `Import` statement:
 
 ```js
-import Button from '@bit/wonderwoman.wonderbit.ui.button';
+import Button from '@bit/wonderwoman.diana.ui.button';
 ```
 
 Call the node module:
@@ -305,7 +305,7 @@ Your `src/App.js` should look like this:
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from '@bit/wonderwoman.wonderbit.ui.button';
+import Button from '@bit/wonderwoman.diana.ui.button';
 
 class App extends Component {
  render() {
@@ -337,7 +337,7 @@ You can see the button component rendered in your project.
 
 ## Modify Components
 
-You can modify the imported React component (`ui/button`) in the consuming project located locally (in thus tutorial the `import-button` project), and export it back to the remote scope.
+You can modify the imported React component (`ui/button`) in the consuming project located locally (in this tutorial the `import-button` project), and export it back to the remote scope.
 
 ### Initialize Bit in the consuming project
 
@@ -348,7 +348,7 @@ In this tutorial the consuming project is the`import-button` project. Initialize
 ```bash
 $ bit init
 
-successfully initialized an empty bit Scope.
+successfully initialized an empty bit workspace.
 ```
 
 ### Import the component to your project
@@ -356,12 +356,12 @@ successfully initialized an empty bit Scope.
 Use the `bit import` command to source your component to the project.
 
 ```bash
-$ bit import wonderwoman.wonderbit/ui/button --path src/components
+$ bit import wonderwoman.diana/ui/button --path src/components
 
-successfully ran npm install at /Users/../Documents/bit-tutorial-prj/tutorial-react/import-button/src/components
+successfully ran npm install at /Users/../tutorial-react/import-button/src/components
 
 successfully imported one component
-- wonderwoman.wonderbit/ui/button@0.0.1
+- wonderwoman.diana/ui/button@0.0.1
 ```
 
 Run `npm start` to see that the project renders just the same.
@@ -374,13 +374,19 @@ Open your code editor to view the updated source tree. In your tree you can see 
 
 > **Configurations for Imported Components**
 >
-> To configure the way your project workspace handles imported component's `dist` files, dependencies and packages, please see [here](https://docs.bitsrc.io/docs/conf-bit-json.html).
+> To configure the way your project  handles imported component's `dist` files, dependencies and packages, please see [here](https://docs.bitsrc.io/docs/conf-bit-json.html).
 
 #### How Does it Work
 
-After installing a component using npm, use the command `bit import` in your code. Bit identifies the imported component as a `bit component` and replace the component's node module with a symlink to the location of the sourced component.
+After installing a component using npm, use the `bit import`command in your code. Bit identifies the imported component as a `bit component` and replace the component's node module with a symlink to the location of the sourced component.
 
-In your code, when using node module, you use an absolute `import` statement. Once importing components using Bit, Bit replaces the node module with a symlink to the sourced component.
+```bash
+$ tree node_modules/@bit
+
+node_modules/@bit
+└── wonderwoman.diana.ui.button -> /Users/../tutorial-react/import-button/src/components
+1 directory, 0 files
+```
 
 Your `import` statement now refers to the sourced component. Every time you use `bit import` in a project, Bit will create a symlink to the component in your node modules directory. You can use absolute `import` statement to use sourced components.
 
@@ -388,11 +394,11 @@ Your `import` statement now refers to the sourced component. Every time you use 
 
 Update the `button.js` component from the **consuming** project (e.g `import-button`) and [export](/docs/cli-export.html) the changed component back to the remote Scope you've created.
 
-Open your IDE and navigate to the file `src/components/ui/button/src/ui/button.js`, update the default properties section of the button to:
+Open your IDE and navigate to the file `src/components/button.js`, update the default properties section of the button to:
 
 ```js
 Button.defaultProps = {
-  text: 'Changed example',
+  text: 'Go Diana',
   buttonColor: "rgba(161, 188, 202, 0.34)",
   buttonHoverColor: "rgb(119, 148, 162)"
 }
@@ -404,7 +410,9 @@ In your terminal run:
 npm start
 ```
 
-Changes are not updated on your browser, yet.
+> **Note**
+>
+>Changes are not updated on your browser, yet...
 
 #### Build your "dist" files to reflect the changes in your source code
 
@@ -413,8 +421,16 @@ When modifying an imported component with a build environment, changes you make 
 ```bash
 $ bit build
 
-/Users/../Documents/bit-tutorial-prj/tutorial-react/import-button/dist/src/ui/button.js.map
-/Users/../Documents/bit-tutorial-prj/tutorial-react/import-button/dist/src/ui/button.js
+successfully installed the bit.envs/compilers/react@0.0.13 compiler
+wonderwoman.diana/ui/button@0.0.1
+/Users/../tutorial-react/import-button/src/components/dist/button.js.map
+/Users/../tutorial-react/import-button/src/components/dist/button.js
+```
+
+Now run:
+
+```bash
+$ npm start
 ```
 
 Take a look at your browser and see the changes, as expected!
@@ -431,7 +447,7 @@ no new components
 -----------------
 
 modified components
-     > wonderwoman.wonderbit/ui/button... ok
+     > ui/button ... ok
 
 -----------------
 
@@ -449,18 +465,20 @@ no deleted components
 A simple `bit tag` command will lock a new version for the component with this change.
 
 ```bash
-$ bit tag --all --patch
+$ bit tag --all
 
-1 components tagged | 1 added, 0 changed, 0 auto-tagged
-added components:  ui/button
+1 components tagged | 0 added, 1 changed, 0 auto-tagged
+changed components:  ui/button@0.0.2
 ```
 
 ### Export component new version
 
-To export the component new version, use the `bit export` command again, but now add the flag `--eject`. This flag allowes  Bit to replace the component node module with the exported version, so that your project will have less code and clutter.
+To export the component new version, use the `bit export` command again, but now add the flag `--eject`. This flag allows  Bit to replace the component node module with the exported version, so that your project will have less code and clutter.
 
 ```bash
-$ bit export ui/button wonderwoman.wonderbit --eject
+$ bit export wonderwoman.diana ui/button --eject
+
+exported 1 components to scope wonderwoman.diana
 ```
 
 Open your IDE and see that the component is no longer a part of it, and was added to your project's `package.json` file.
@@ -469,23 +487,23 @@ Open your IDE and see that the component is no longer a part of it, and was adde
 
 ## Import updated component
 
-Now you can use the updated React component, and import it in to the `import-button` project. By doing so, you will receive the updates exported to the remote Scope into your local project as well.
+Now you can use the updated React component, and import it in to the `export-button` project. By doing so, you will receive the updates exported to the remote Scope into your local project as well.
 
 ### Consume updated component
 
-In your terminal, go to the `import-button` project:
+In your terminal, go to the `export-button` project:
 
 ```bash
-$ cd ../import-button
+$ cd ../export-button
 ```
 
 Now update your component by re-importing:
 
 ```bash
-$ bit import wonderwoman.wonderbit/ui/button --force
+$ bit import wonderwoman.diana/ui/button --force
 
 successfully imported one component
-- wonderwoman.wonderbit/ui/button@0.0.2
+- wonderwoman.diana/ui/button@0.0.2
 ```
 
 Run the project again, and see that it is renders the updated button:
