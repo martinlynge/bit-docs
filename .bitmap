@@ -77,8 +77,13 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/tutorial"
     },
-    "bit.docs/content/docs@0.0.3": {
+    "bit.docs/content/docs@0.0.4": {
         "files": [
+            {
+                "name": "rendering-components.md",
+                "relativePath": "rendering-components.md",
+                "test": false
+            },
             {
                 "name": "authentication-issues.md",
                 "relativePath": "authentication-issues.md",
