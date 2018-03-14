@@ -77,7 +77,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/tutorial"
     },
-    "bit.docs/content/docs@0.0.2": {
+    "bit.docs/content/docs@0.0.3": {
         "files": [
             {
                 "name": "authentication-issues.md",
@@ -400,5 +400,5 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/docs"
     },
-    "version": "0.12.7"
+    "version": "0.12.8"
 }
