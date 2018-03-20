@@ -2,8 +2,6 @@
   items:
     - id: quick-start
       title: Quick Start
-  # - id: what-is-bit
-  #    title: What is Bit?
     - id: installation
       title: Installation
     - id: initializing-bit
@@ -30,6 +28,14 @@
       title: Removing Components
     - id: documenting-components
       title: Documenting Components
+- title: What is Bit?
+  items:
+    - id: about-bit
+      title: About Bit
+    - id: glossary
+      title: Glossary
+   ## - id: faq
+     ## title: FAQ
 - title: Extending Bit
   items:
     - id: ext-concepts

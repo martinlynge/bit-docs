@@ -33,6 +33,13 @@ bit install foo/bar
 
 This will install all the dependencies for a specific component - whether they were defined in your package.json or in your [bit.json](/docs/conf-bit-json.html).
 
+### Pass an extra arguments to npm
+
+In order to pass extra arguments to an npm client, place the arguments after `--`.
+  
+```bash
+bit import -- --production --no-optional
+```
 ## Options
 
 **-v, --versbose**

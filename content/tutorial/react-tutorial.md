@@ -13,10 +13,11 @@ Here is [an example](https://bitsrc.io/bit/movie-app) of a React [Scope](/docs/w
 
 ### In this tutorial you'll learn
 
-- How to share a React component from one project's repository to a different project using Bit
+- How to share a React component from one project's repository to a different one using Bit
 - How to integrate building tools into a React component
 - How to export a React component to a remote [Bit Scope](/docs/scopes-on-bitsrc.html#scopes)
-- How to update your React components using Bit
+- How to update a React component using Bit
+- How to render a React component for preview
 
 We have created an [example project](https://github.com/teambit/tutorial-react) containing two directories, both created with [create-react-app](https://github.com/facebookincubator/create-react-app).
 
@@ -87,8 +88,8 @@ To learn more see [Initializing Bit](/docs/initializing-bit.html)
 
 ### Add & Track with Bit
 
-It’s time to start tracking one of your React components.
-We'll start by adding the button component.
+It’s time to start [tracking](/docs/cli-tag.html) your React components.
+Start by [adding](/docs/cli-add.html) the button component.
 Let’s give it a name, in this tutorial we called it `ui/button`:
 
 ```bash
@@ -126,31 +127,34 @@ no deleted components
 
 You can see that the `ui/button` component was just added to the “new components” section.
 
-Use the [bit status](/docs/cli-status.html) command as often as you’d like to see the current status of all the components you are working on. When in doubt - [bit status](/docs/cli-status.html)!
+Use the [bit status](/docs/cli-status.html) command as often as you’d like to see the current status of all the components you are working on. When in doubt - `bit status`!
 
 ### Add Build environment
 
 #### Why & What are Build environments
 
-To use React components you need to compile your code so it can run on a browser.
-Build environment is a component 'build task', so that Bit can then run and compile it. Bit has multiple build environments available for use, all are hosted on [bitsrc.io](https://bitsrc.io) as Bit components in a Scope called ["envs"](https://bitsrc.io/bit/envs).
-To learn more please see [build components](/docs/building-components.html). A built component can then be [consumed as a node module](/docs/installing-components-using-package-managers.html) directly from [bitsrc.io](https://bitsrc.io) using npm/yarn (you will do that later on in this tutorial).
+A React component needs to be compiled so it can run on a browser.
+**Build** environment is a 'build task` that Bit uses to run and compile the component. To learn more, see [build components](/docs/building-components.html).
 
-The React component we are using needs to be compiled, in order to do so, use this [React environment](https://bitsrc.io/bit/envs/compilers/react).
+A *built* component can then be [consumed as a node module](/docs/installing-components-using-package-managers.html) directly from [bitsrc.io](https://bitsrc.io) using NPM or Yarn.
+
+The React component you are using needs to be compiled, for this tutorial we'll use a **bundler**. A bundler is a type of a compiler. 
+
+Bit has multiple build environments and bundlers available for your use, hosted as Bit components in a Scope called ["envs"](https://bitsrc.io/bit/envs).
 
 > **Note: Isolated Environment**
 >
 > Bit creates an isolated environment for each component in your scope. Bit runs all the component's build tasks there. This will also happen after exporting components to a remote scope. To learn more see [Isolated Component Environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment)
 
-### Add a Build environment to a component
+### Bundle your component
 
-Add an environment by using the [Import](/docs/cli-import.html#import-a-single-component-from-a-remote-scope) command, with the relevant flag. This will ensure all components in your local scope will have the same imported environment.
+Add an environment by using the [Import](/docs/cli-import.html#import-a-single-component-from-a-remote-scope) command suffixed with the relevant flag. This will ensure all components in your local scope will have the same  environment.
 
 ```bash
-$ bit import bit.envs/compilers/react --compiler
+$ bit import bit.envs/bundlers/webpack -c
 
 the following component environments were installed
-- bit.envs/compilers/react@0.0.13
+- bit.envs/bundlers/webpack@0.0.6
 ```
 
 ### Build your component
@@ -160,9 +164,7 @@ To build the `ui/button` component, run the bit build command:
 ```bash
 $ bit build ui/button
 
-/Users/../tutorial-react/export-button/dist/src/ui/button.js.map
 /Users/../tutorial-react/export-button/dist/src/ui/button.js
-
 ```
 
 ### Lock your React component version
@@ -287,7 +289,7 @@ $ npm install @bit/wonderwoman.diana.ui.button
 
 ### Use in your project
 
-In your code editor open the `src/App.js` file and add the `Import` statement:
+In your code editor open the `src/App.js` file and update  the `Import` statement:
 
 ```js
 import Button from '@bit/wonderwoman.diana.ui.button';
@@ -512,7 +514,7 @@ Run the project again, and see that it is renders the updated button:
 $ npm start
 ```
 
-## wrapping up
+## Wrapping up
 
 In this tutorial you’ve learned how to:
 

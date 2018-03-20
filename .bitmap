@@ -47,6 +47,11 @@
                 "name": "videos.md",
                 "relativePath": "videos.md",
                 "test": false
+            },
+            {
+                "relativePath": "LICENSE",
+                "test": false,
+                "name": "LICENSE"
             }
         ],
         "mainFile": "index.js",
@@ -54,30 +59,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/community"
     },
-    "bit.docs/content/tutorial@0.0.4": {
-        "files": [
-            {
-                "name": "nav.yml",
-                "relativePath": "nav.yml",
-                "test": false
-            },
-            {
-                "name": "react-tutorial.md",
-                "relativePath": "react-tutorial.md",
-                "test": false
-            },
-            {
-                "name": "index.js",
-                "relativePath": "index.js",
-                "test": false
-            }
-        ],
-        "mainFile": "index.js",
-        "rootDir": "content/tutorial",
-        "origin": "IMPORTED",
-        "originallySharedDir": "content/tutorial"
-    },
-    "bit.docs/content/docs@0.0.4": {
+    "bit.docs/content/docs@0.0.5": {
         "files": [
             {
                 "name": "rendering-components.md",
@@ -405,5 +387,28 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/docs"
     },
-    "version": "0.12.8"
+    "bit.docs/content/tutorial@0.0.5": {
+        "files": [
+            {
+                "name": "nav.yml",
+                "relativePath": "nav.yml",
+                "test": false
+            },
+            {
+                "name": "react-tutorial.md",
+                "relativePath": "react-tutorial.md",
+                "test": false
+            },
+            {
+                "name": "index.js",
+                "relativePath": "index.js",
+                "test": false
+            }
+        ],
+        "mainFile": "index.js",
+        "rootDir": "content/tutorial",
+        "origin": "IMPORTED",
+        "originallySharedDir": "content/tutorial"
+    },
+    "version": "0.12.10-dev.2"
 }

@@ -71,8 +71,8 @@ bit import --environment
 In order to import and set a new [environment](/docs/ext-concepts.html#extensions-vs-environments) for your project's components, use the `--tester` and `--compiler` flags:
 
 ```bash
-bit import bit.envs/compilers/babel --compiler
-bit import bit.envs/testers/mocha --tester
+$ bit import bit.envs/compilers/babel --compiler
+$ bit import bit.envs/testers/mocha --tester
 ```
 
 ### Import an extension
@@ -83,6 +83,13 @@ In order to import a new [extension](/docs/ext-concepts.html#what-is-an-extensio
 bit import bit.extensions/commands/pack --extension
 ```
 
+### Pass an extra arguments to npm
+
+In order to pass extra arguments to an npm client, place the arguments after `--`.
+  
+```bash
+bit import -- --production --no-optional
+```
 ## Options
 
 **-t, --tester**
