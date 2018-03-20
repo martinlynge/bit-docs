@@ -1,6 +1,6 @@
 # bit-docs
 
-This repo contains the content of the [documantation](https://docs.bitsrc.io/) for [Bit](https://github.com/teambit/bit).
+This repo contains the content of the [documentation](https://docs.bitsrc.io/) for [Bit](https://github.com/teambit/bit).
 
 ## Contributing
 
