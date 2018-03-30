@@ -18,3 +18,4 @@ Here are some example projects and / or component collections. Feel free to add 
 * [React Bootstrap components](https://bitsrc.io/react-bootstrap/react-bootstrap) made individually available as a Bit collection.
 * [Reactstrap components](https://bitsrc.io/reactstrap/reactstrap) made individually available as a Bit collection.
 * [React app](https://gideonshils.github.io/Belle-With-Bit/) built with Belle components managed by Bit.
+* [React Vital-UI-Kit components](https://github.com/GSS-FED/vital-ui-kit-react) which is react version of [Vital UI Style](https://github.com/GSS-FED/vital-ui-kit), and a [matching collection](https://bitsrc.io/gssfed/vital-ui-kit-react) of components shared from this App with Bit.
