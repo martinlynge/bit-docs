@@ -4,6 +4,8 @@ title: Using Extensions
 permalink: docs/ext-using-extensions.html
 layout: docs
 category: Extending Bit
+prev: ext-concepts.html
+next: ext-developing-extensions.html
 ---
 
 Using [extensions](/docs/ext-concepts.html) is fairly straightforward. Let's learn how!
@@ -38,13 +40,13 @@ Extensions' configuration and options are part of the [bit.json](/docs/conf-bit-
 
 System-wide options that are relevant for every Bit extension.
 
-* `core` - Determines whether the extension is a [core extension](/docs/ext-core-extensions.html) (bool).
+* `core` - Determines whether the extension is a core extension (bool).
 * `disabled` - When `true`, Bit won't load the extension (bool).
 * `file` - A path to the extension's main file. The file path is relative to the working directory's location, or an absolute path. When provided, Bit will load the extension from this path, and not from the [usual location](#storage).
 
 ### Configuration
 
-Contains all the configuration the extension needs. Unlike the [options](#options), the configuration is for the usage of the specific extension.
+Contains all the configuration the extension needs. Unlike the system [options](#options), the configuration is used for the usage of the specific extension.
 
 ## Load an extension programmatically
 

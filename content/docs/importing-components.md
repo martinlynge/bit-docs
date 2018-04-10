@@ -5,7 +5,7 @@ permalink: docs/importing-components.html
 layout: docs
 category: Getting Started
 prev: installing-components-using-package-managers.html
-next: updating-sourced-components.html
+next: updating-sourced-component.html
 ---
 
 Importing a component to a repository using Bit, enables you to source any component in any repository while keeping all changes synced.
@@ -68,7 +68,7 @@ $ tree .
 3 directories, 6 files
 ```
 
-As you can see, the component [string/left-pad](https://bitsrc.io/bit/utils/string/left-pad) is now sourced in this repository `src/left-pad`. 
+As you can see, the component [string/left-pad](https://bitsrc.io/bit/utils/string/left-pad) is now sourced in this repository `src/left-pad`.  
 To require this component you can use either relative paths or absolute paths see [Linking components section](/docs/importing-components.html#linking-components).
 
 > **Note**
@@ -78,10 +78,18 @@ To require this component you can use either relative paths or absolute paths se
 
 ## Importing different component versions
 
-When importing a component, the latest version will be imported by default. If, you want to import a diffrent version, you can do that by specifying the version after an `@` sign:
+When importing a component, the latest version will be imported by default. If, you want to import a different version, you can do that by specifying the version after an `@` sign:
 
 ```bash
 $ bit import bit.examples/string/left-pad@0.0.11
+```
+
+## Switching between different component versions
+
+A local Scope contains all objects and versions of all sourced components in a workspace. This means that if you need to use an older, or newer, version of a component (to test its validity with a project, for example), you can run the [checkout](/docs/cli-checkout.html)  which will switch between local copies of component versions in your workspace.
+
+```bash
+bit checkout foo/bar@2.9.2
 ```
 
 ## Dependencies
@@ -231,6 +239,24 @@ $ bit status
 modified components
   > string/pad-left
 ```
+
+## Upgrade a dependency of sourced components
+
+Imported (sourced) components are isolated from the project's environment (using its own `node_modules` directory, a dedicated build flow, etc). This means that updating its dependencies needs to happen in the component's isolated environment - i.e the folder its imported too.
+
+Below described the steps Bit takes in order to determine the component's dependencies and their versions.
+
+1. According to the data models stored in the scope (`.bit` folder).
+2. According to the content of the component's `bit.json` file.
+3. According to the component's `package.json` file.
+  1. Look for a `package.json` file in the component's directory.
+  2. If not found, propagate to project's root directory, and look for `package.json` in each directory.
+  3. If no `package.json` found, check the version of the package in the `node_modules` directory.
+4. According to the data in the `.bitmap` file.
+5. According to the data in the `bit.json` file that stored in the project's root directory.
+6. According to the `package.json` in the project's root directory.
+
+This means that the most straightforward way of changing a version of a package dependency of a component is to either edit its `bit.json` or `package.json` files.
 
 ## Versioning sourced components
 

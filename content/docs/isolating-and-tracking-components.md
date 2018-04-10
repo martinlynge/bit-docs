@@ -29,7 +29,7 @@ Although components with different dependency graphs are all tracked the same wa
 
 > **Tip**
 >
-> This section explains how to track components and handle the unique use cases of different dependency graphs using the [bit add](/docs/cli-add.html) command. To learn more about that command, head over to the [add section in our CLI reference](/docs/cli-add.html).
+> This section explains how to track components and handle the unique use cases of different dependency graphs using the [bit add](/docs/cli-add.html) command.
 
 ## Tracking a simple component
 
@@ -60,7 +60,7 @@ export default function hello(world) {
 }
 ```
 
-In order to track this component, simply use the [bit add](/docs/cli-add.html) command, list the files that compose this component and set an ID for the component.
+In order to track this component, use the [bit add](/docs/cli-add.html) command, list the files that compose this component and set an `ID` for it.
 
 ```bash
 $ bit add src/hello-world.js src/index.js --id hello/world
@@ -112,7 +112,7 @@ $ tree
 We can track all these components with a single command.
 
 ```bash
-bit add src/components/* --namespace user
+$ bit add src/components/* --namespace user
 ```
 
 Use [bit status](/docs/cli-status.html) to make sure the components' dependency graphs are successfully resolved.
@@ -133,7 +133,7 @@ new components
 If you are using glob patterns to track components, you might find that some of the files that the pattern finds should not be tracked as part of any of the components. For that you would want to tell Bit to ignore these files. This is done using the `--exclude` flag:
 
 ```bash
-bit add src/component/* --namespace user --exclude *.spec.js
+$ bit add src/component/* --namespace user --exclude *.spec.js
 ```
 
 > **Files excluded by default**
@@ -245,7 +245,7 @@ new components
 
 This means that Bit was unable to resolve the component's required package version within the project working directory, and therefore failed to set the version for the newly created component.
 
-As described in the [above section](/docs/isolating-and-tracking-components.html#tracking-a-component-with-package-dependencies), there are a few different strategies that Bit uses for resolving a package version. If it fails to resolve the package version, this error will be shown when using [bit status](/docs/cli-status.html) or [bit tag](/docs/cli-tag.html).
+As described in the [section above](/docs/isolating-and-tracking-components.html#tracking-a-component-with-package-dependencies), there are a few different strategies that Bit uses for resolving a package version. If it fails to resolve the package version, this error will be shown when using [bit status](/docs/cli-status.html) or [bit tag](/docs/cli-tag.html).
 
 To resolve this issue, please make sure the required package is either defined in the repository's package.json file or exists in the `node_modules` directory.
 
@@ -300,7 +300,7 @@ export default () => {};
 Tracking the `hello-world` component works just the same in this example.
 
 ```bash
-bit add src/hello-world --id hello/world
+$ bit add src/hello-world --id hello/world
 ```
 
 However, once running [bit status](/docs/cli-status.html), you will get a prompt from Bit saying 'untracked file dependencies'.
@@ -321,7 +321,7 @@ To understand how to handle this matter, let's go through what Bit does in the b
 
 Now that you better understand how Bit works behind the scenes, there are two possible courses of action.
 
-#### Add an untracked file dependency into a component
+### Add an untracked file dependency into a component
 
 If the [bit status](/docs/cli-status.html) command shows you an `untracked file dependency` warning on a component and you've decided that the specific file(s) is part of the component implementation, you can add it to the newly tracked component.
 
@@ -330,28 +330,28 @@ If the [bit status](/docs/cli-status.html) command shows you an `untracked file 
 Let's continue the flow from the [previous section](#tracking-a-component-with-file-dependencies). Adding the `src/utils/noop.js` as a file in the component, append it as follows.
 
 ```bash
-bit add src/utils/noop.js --id hello/world
+$ bit add src/utils/noop.js --id hello/world
 ```
 
 Now you can rerun [status](/docs/cli-status.html), and see that the error is resolved.
 
 ```bash
-new components
+$ new components
      > component/hello-world... ok
 ```
 
-#### Track an untracked file dependency as a component dependency
+### Track an untracked file dependency as a component dependency
 
 In some cases, you will see the `untracked file dependency` warning, and realize that the untracked file should be a part of another component that should be tracked by Bit - because it's required by additional components in your project, or maybe just because it has a separate responsibility.
 
 In this case, you can track the file(s) as a new component. The new component will be added as a dependency to the original component.
 
-Due to the fact that the process of detecting component dependencies is automatic ([as explained previously](#tracking-a-component-with-dependencies-in-the-project)), you simply need to add a new component, and ensure that the untracked file dependency is indeed part of it.
+Due to the fact that the process of detecting component dependencies is automatic ([as explained previously](#tracking-a-component-with-dependencies-in-the-project)), you just need to add a new component and ensure that the untracked file dependency is part of it.
 
-In order to resolve the issue from the previous example, and set `src/utils/noop.js` as a new component dependency for `hello/world` you simply need to run this [add](/docs/cli-add.js) command.
+In order to resolve the issue from the previous example, and set `src/utils/noop.js` as a new component dependency for `hello/world` you need to run the [add](/docs/cli-add.js) command.
 
 ```bash
-bit add src/utils/noop.js --id utils/noop
+$ bit add src/utils/noop.js --id utils/noop
 ```
 
 The result will be a new component, which is now a dependency for the `hello/world` component.
@@ -366,7 +366,7 @@ new components
 To validate that Bit has added `utils/noop` as a dependency, you can run the following command, and make sure the dependency is defined within the output.
 
 ```bash
-bit show hello/world
+$ bit show hello/world
 ```
 
 ## Tracking a component with test/spec files
@@ -387,7 +387,7 @@ Let's look at this basic example.
 ```
 
 ```bash
-bit add src/hello-world src/index.js --tests specs/hello-world.spec.js --id hello/world
+$ bit add src/hello-world src/index.js --tests specs/hello-world.spec.js --id hello/world
 ```
 
 This way the `hello-world.spec.js` file will be added to the component, but marked as a specification file, so all its dependencies are marked as `devDependencies`, and if you add a test task to the component, Bit will know which file to use.
@@ -418,7 +418,7 @@ In the project's structure below, the directory `hello-world` has no `index.js` 
 To track the `hello-world` directory as a component with `hello-world.js` as the entry point for the component, use the following command:
 
 ```bash
-bit add src/hello-world --main src/hello-world/hello-world.js --id hello/world
+$ bit add src/hello-world --main src/hello-world/hello-world.js --id hello/world
 ```
 
 This way, Bit will take care of the main file definition without you having to worry about adding extra files to your project or component.
@@ -437,13 +437,13 @@ To append a new file to the component, use the [bit add](/docs/cli-add.html) com
 If you'd like to append a new file called `foo.js` to an existing component called `foo/bar`, you can simply use the following command:
 
 ```bash
-bit add src/foo.js --id foo/bar
+$ bit add src/foo.js --id foo/bar
 ```
 
 To make sure the new file has been added to your component, you can use [bit show](/docs/cli-show.html) and look for the newly added files under `files`.
 
 ```bash{9}
-> bit show
+>  bit show
 ┌───────────────────┬─────────────────────────────────────────────────────────────────────┐
 │        ID         │                              foo/bar                                │
 ├───────────────────┼─────────────────────────────────────────────────────────────────────┤
@@ -480,14 +480,14 @@ To better understand how Bit resolves names, let's assume the following director
 If you track the file `noop.js` under the `utils` directory with [bit add](/docs/cli-add.html) without specifying an ID, Bit will automatically resolve the id.
 
 ```bash
-bit add src/utils/noop.js
+$ bit add src/utils/noop.js
 ```
 
 As you can understand from the above, Bit would resolve the ID of the component to `utils/noop` - seeing as `utils` is the parent directory and noop is the added file/directory name.  
 To see the defined component Id, you can check out [bit status](/docs/cli-status.html) or [bit list](/docs/cli-list.html) (after the component has been tagged).
 
 ```bash
-bit status
+$ bit status
 new components
      > utils/noop... ok
 ```
@@ -497,7 +497,7 @@ new components
 In some cases you might want to untrack a component you've recently added. This can be easily done using [bit untrack](/docs/cli-untrack.html).
 
 ```bash
-bit untrack hello/world
+$ bit untrack hello/world
 ```
 
 > **Note**
@@ -517,7 +517,7 @@ The following variables are available in the DSL.
 As an example, and in order to understand Tracking DSL better, let's assume the following file system structure.
 
 ```bash
-> tree .
+>  tree .
 .
 ├── App.js
 ├── App.test.js
@@ -537,11 +537,11 @@ As an example, and in order to understand Tracking DSL better, let's assume the 
 4 directories, 13 files
 ```
 
-As mentioned before in the [previous sections](/docs/isolating-and-tracking-components.html#tracking-multiple-components-using-a-single-command), you can use glob patterns to track multiple components at once. In the project structure above, to make things complicated, the main and tests files have different names for each of the components.  
+As mentioned in the [previous sections](/docs/isolating-and-tracking-components.html#tracking-multiple-components-using-a-single-command), you can use glob patterns to track multiple components at once. In the project structure above, to make things complicated, the main and tests files have different names for each of the components.  
 Using the DSL, you can still track these components by using variables, and dynamically set both main and test files.
 
 ```bash
-bit add src/components/* --main src/{PARENT}/{PARENT}.js --tests src/components/{PARENT}/{FILE_NAME}.spec.js --namespace ui
+$ bit add src/components/* --main src/{PARENT}/{PARENT}.js --tests src/components/{PARENT}/{FILE_NAME}.spec.js --namespace ui
 ```
 
 Bit will match and dynamically build the path for the main and test files for each component. 

@@ -4,13 +4,14 @@ title: add
 permalink: docs/cli-add.html
 layout: docs
 category: CLI Reference
+next: cli-build.html
 ---
 Tracks any set of files as a single or multiple components.
 
 ## Synopsis
 
 ```bash
-bit add|a <files> [-i|--id <id>] [|]-m|--main <main file name>] [-t|--tests <tests>] [-n|--namespace <namespace>] [-e|--exclude <files to exclude>] [-o|--override]
+bit add|a <files> [-i|--id <id>] [-m|--main <main file name>] [-t|--tests <tests>] [-n|--namespace <namespace>] [-e|--exclude <files to exclude>] [-o|--override]
 ```
 
 ## Examples

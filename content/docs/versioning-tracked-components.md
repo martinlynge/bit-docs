@@ -8,9 +8,9 @@ prev: isolating-and-tracking-components.html
 next: organizing-components-in-scopes.html
 ---
 
-Versioning tracked components in a repository helps to create higher-level contracts for the safe reuse of components between different repositories and people.
+Versioning tracked components in a repository helps create a higher-level contracts, for the safe reuse of components between different repositories and users.
 
-Versioning components is essential when collaborating on components to avoid breaking the different applications components are sourced or used in. Component versioning can get complex in complex dependency graphs and Bit does a lot to make this process as easy and efficient as possible.
+Versioning components is essential when collaborating on components to avoid breaking the different applications the components are sourced to or used in. Component versioning can get complex in complex dependency graphs and Bit does a lot to make this process as easy and efficient as possible.
 
 Once a Bit component is tracked, you can version it using the [bit tag](/docs/cli-tag.html) command.  
 Upon tagging, Bit will apply the actions below to make sure that the component dependency graph is resolved. It will also validate that the component is isolated and can be reused outside of the repository's context.
@@ -57,7 +57,7 @@ staged components
 >
 > In case a specific version was not specified, Bit will increment a patch version by default.
 > This means that in the above case the command `bit tag hello/world` will tag the component in version `0.0.1`.
-> To increment major or minor versions you can use the `--minor` or `--major` flags as described on the [Bumping component versions section below](/docs/versioning-tracked-components.html#bumping-component-versions).
+> To increment major or minor versions you can use the `--minor` or `--major` flags as described on the [Bumping component versions](/docs/versioning-tracked-components.html#bumping-component-versions) section, below.
 
 ## Versioning multiple components
 
@@ -66,7 +66,7 @@ To ease the process of versioning multiple new or modified components, [bit tag]
 
 `--all` flag indicates to Bit to tag all new and modified components together. It can accept a specific SemVer for all components or increment each of the component's versions individually.
 
-To understand this better, let's take the following component status as an example.
+To understand this better, let's take the following component status as an example:
 
 ```bash
 $ bit status
@@ -91,11 +91,11 @@ As you can see, since a specific version was not specified, Bit increased all ne
 > **Note**
 >
 > As [bit tag](/docs/cli-tag.html) applies only to new and modified components, it can't be used for aligning versions of all the components under the same Scope.
-> To tag and align all versions under the same Scope, head over to the [section below](/docs/versioning-tracked-components.html#aligning-all-local-components-to-the-same-version).
+> To tag and align all versions under the same Scope, head over to the [align local components](/docs/versioning-tracked-components.html#aligning-all-local-components-to-the-same-version) section below.
 
 ## Versioning components in a complex dependency graph
 
-Components that depend on other components, such as [this example](/docs/isolating-and-tracking-components.html#track-an-untracked-file-dependency-as-a-component dependency) are called 'components with dependency tree'. If you have this structure in your components, you might see sometime that a component you haven't modified yourself might be marked as modified. That's because a dependency of that component has been changed, and thus the dependency tree has been modified.
+Components that depend on other components, such as [this example](/docs/isolating-and-tracking-components.html#tracking-a-component-with-file-dependencies) are called 'components with dependency tree'. If you have this structure in your components, you might sometime see that a component you haven't modified yourself is marked as modified. That's because a dependency of that component has been changed, and thus the dependency tree has been modified.
 
 For example, when component `foo` requires component `bar`, and both are in the same project, and the component `bar` is modified - `foo` will be marked as modified as well, when we run the [bit status](/docs/cli-status.html) command. However, the component's source code hasn't changed at all, but rather its dependency graph has.
 

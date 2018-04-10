@@ -18,6 +18,8 @@
       title: Importing Components
     - id: updating-sourced-components
       title: Updating Sourced Components
+    - id: merge-versions
+      title: Merge Component Versions
     - id: building-components
       title: Building Components
     - id: testing-components
@@ -28,14 +30,10 @@
       title: Removing Components
     - id: documenting-components
       title: Documenting Components
-- title: What is Bit?
+- title: Bit Basics
   items:
     - id: about-bit
-      title: About Bit
-    - id: glossary
-      title: Glossary
-   ## - id: faq
-     ## title: FAQ
+      title: About
 - title: Extending Bit
   items:
     - id: ext-concepts
@@ -56,6 +54,8 @@
       title: Bit on the Server      
     - id: conf-config
       title: Config
+    - id: conf-analytics
+      title: Usage Analytics
 - title: Troubleshooting
   items:
     - id: latest-version
@@ -84,6 +84,8 @@
       title: add
     - id: cli-build
       title: build
+    - id: cli-checkout
+      title: checkout
     - id: cli-clear-cache
       title: clear-cache
     - id: cli-config
@@ -104,6 +106,8 @@
       title: list
     - id: cli-log
       title: log
+    - id: cli-merge
+      title: merge
     - id: cli-move
       title: move
     - id: cli-remote

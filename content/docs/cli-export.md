@@ -4,6 +4,8 @@ title: Export
 permalink: docs/cli-export.html
 layout: docs
 category: CLI Reference
+prev: cli-deprecate.html
+next: cli-import.html
 ---
 Pushes staged component(s) to a remote Scope.
 

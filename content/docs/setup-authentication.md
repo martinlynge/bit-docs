@@ -3,7 +3,8 @@ id: setup-authentication
 title: Setup Bitsrc Authentication
 permalink: docs/setup-authentication.html
 layout: docs
-prev: bitsrc-component-ci
+prev: bitsrc-component-ci.html
+next: my-account.html
 ---
 
 [Bit](https://github.com/teambit/bit) is open source and distributed, Scopes can be set up on any machine.

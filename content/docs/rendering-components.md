@@ -8,20 +8,18 @@ prev: testing-components.html
 next: removing-components.html
 ---
 
-To allow users to interact directly with your components, that are available at [bitsrc.io](https://bitsrc.io), we recommand to render your components, as explaind in this document. 
-
-See an example of a rendered component in this [Scope](https://bitsrc.io/bit/movie-app/components/hero).
+Rendering allows other users to interact with your Scoped component(s), directly at [bitsrc.io](https://bitsrc.io).   
+See an example of a rendered component [here](https://bitsrc.io/bit/movie-app/components/hero).
 
 ## How Does it Work?
-
 - Add annotations to your component, documenting how it should be rendered.
-- Bundle your component as a [UMD](https://github.com/umdjs/umd), you can use one of Bit’s bundlers. See [Building Components](docs/building-components.html) .
+- Bundle your component as a [UMD](https://github.com/umdjs/umd) using bundler. You can use one of Bit’s existing bundlers, see [Building Components](docs/building-components.html).
 - [Tag](/docs/cli-tag.html) & [Export](/docs/cli-export.html) your component.
-- Your component will be available for preview at bitsrc.io [Scope](https://docs.bitsrc.io/docs/scopes-on-bitsrc.html#create-a-scope-on-bitsrc)
+- Preview your component in your bitsrc.io [Scope](docs/scopes-on-bitsrc.html).
 
 ### Annotations
-
 Some [JSDocs](http://usejsdoc.org/about-getting-started.html#adding-documentation-comments-to-your-code) annotations needs to be added to your component, for example:
+
 ```js
 /**
 * @render react
@@ -37,28 +35,27 @@ class Hero() {
 ```
 
 Use the following annotations:
-
-### @render react
-Specify the renderer for the component. Renderers are Bit components. currently only "`react`" is supported, additional platforms support is coming soon...
-
-### @name <NAME>
-Specify the component’s name to make sure it will work correctly when the code is minified.
-
-### @example
+#### @render react
+Specify the renderer for the component. Renderers are Bit components, note that currently only "`react`" is supported.
+additional platforms support is coming soon...
+#### @name <NAME>
+Specify the component’s name, to make sure it will work correctly when the code is minified.
+#### @example
 Specify how to render the component.
-
-## Bundles
-
-To render your component, it needs to be bundled as a [UMD](https://github.com/umdjs/umd).
+### Bundlers
+To render your component, bundle it as a [UMD](https://github.com/umdjs/umd).  
 `UMD` is a Javascript standard that works in the browser, in Nodejs, and in your workspace.
+#### Bundling components
+To bundle your component, use a bundler webpack which is a type of a [compiler](/docs/ext-compiling.html). You can use one of Bit bundlers avilable at the [Bit envs Scope](https://bitsrc.io/bit/envs/).  
+Note that the React bundler comes in 2 configurations:  
+- [with](https://bitsrc.io/bit/envs/bundlers/webpack) css modules.
+- [without](https://bitsrc.io/bit/envs/bundlers/webpack-css-modules) css modules.   
+ 
+You can extend or modify bundlers according to your needs. Learn more [here](/docs/building-components.html).
 
-### Bundling components
-
-To bundle your component, use [bundler](https://bitsrc.io/bit/envs/bundlers/webpack). A bundler is a type of a [compiler](https://docs.bitsrc.io/docs/cli-build.html). You can use the Bit bundlers that are available at the [Bit envs Scope](https://bitsrc.io/bit/envs/). The React bundler comes in 2 configurations, [with](https://bitsrc.io/bit/envs/bundlers/webpack) & [without](https://bitsrc.io/bit/envs/bundlers/webpack-css-modules) css modules. You can extend or modify it to your needs. Learn more [here](https://docs.bitsrc.io/docs/cli-build.html).
-
-Bit bundles the components as isolated environments **without** the component’s dependencies (hurray!).
-If other Bit components are used as dependencies, we recommend that these components will be consumed from a [package manager](/docs/installing-components-using-package-managers.html) and not as relative dependencies.
-Today when you consume a component relatively with Bit, it will be bundled as part of the same file.
+Bit bundles the component as an isolated environment **without** the component’s dependencies, making it slim and efficient.
+If other Bit components are used as dependencies, we recommend that these components will be consumed from the [package manager](/docs/installing-components-using-package-managers.html) and not as relative dependencies.
+Today, when you consume a component relatively with Bit, it will be bundled as part of the same file which is less efficiant process.
 Support for relative dependencies will be added in the near future. 
 
 For example, let’s take a look at our [movie-app repository](https://github.com/teambit/movie-app), and its corresponding [components](https://bitsrc.io/bit/movie-app/). The **Hero** component depends on the **HeroButton** component.
@@ -68,20 +65,21 @@ When you consume the **HeroButton** component relatively, it will be bundled alo
 import HeroButton from '../hero-button';
 ```
 
-However, when you consume the **HeroButton** component from the package manger, the **Hero** component will be bundled without it, which is easier to use and maintain:
+However, when you consume the **HeroButton** component from the package manager, the **Hero** component will be bundled without it, which is easier to use and maintain:
 
 ```js 
 import HeroButton from '@bit/bit.movie-app.components.hero-button';
 ```
+
 ### Adding a bundler to an existing component 
 
-- **An imported component** - [import](/docs/updating-sourced-components.html) the component using the `--conf` flag, so the component will have its [bit.json](/docs.bitsrc.io/docs/conf-bit-json.html) file. At `bit.json` you can set a compiler.
+**For an imported component** - [import](/docs/updating-sourced-components.html) the component using the `--conf` flag, so the component will have its own [bit.json](/docs/conf-bit-json.html) file. Set a compiler in the `bit.json`.
 
 ```bash
-$ bit import bit.movie-app/components/hero-button --conf
+bit import bit.movie-app/components/hero-button --conf
 ```
 
-Open your IDE and set the compiler id in your component’s bit.json file:
+Open your IDE and set the compiler id in your component’s `bit.json` file:
 
 ```js 
 "env": {
@@ -90,17 +88,16 @@ Open your IDE and set the compiler id in your component’s bit.json file:
 }
 ```
 
-- **Authored component** - an authored component is a component which is a part of a full project.
+**For an authored component** - an authored component is a component which is a part of a full project.
 [Import the compiler](/docs/building-components.html#defining-a-default-compiler-for-your-project) to your project.
 
 ```bash
-$ bit import bit.envs/bundlers/webpack -c
+bit import bit.envs/bundlers/webpack -c
 ```
 
 ## Injecting Dependencies
-
-Bitsrc.io aspires to provide the component with all the decencies needed for preview.
-Errors will be displayed at the preview frame. Errors almost always happen because there was a problem in the bundle itself.
+Bitsrc.io aspires to provide the component all the dependncies needed for preview.
+Errors will be displayed at the preview frame. Mosr errors occur because there was a problem in the bundle itself.
 
 ## Troubleshooting
 

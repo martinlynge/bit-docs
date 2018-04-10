@@ -36,7 +36,8 @@ To host a Scope on [bitsrc.io](https://bitsrc.io) simply [signup](https://bitsrc
 After versioning components, they will be seen as `staged components` when using [bit status](/docs/cli-status.html) like in the example below.
 
 ```bash
-$ bit status
+bit status
+
 staged components
   > hello/world
   > foo/bar
@@ -46,7 +47,8 @@ To export all `staged components`, use the [bit export](/docs/cli-export.html) c
 As an example, to export all staged components to the Scope [bit/movie-app](https://bitsrc.io/bit/movie-app), use the following command.
 
 ```bash
-$ bit export bit.movie-app
+bit export bit.movie-app
+
 2 components were exported to Scope bit/movie-app
 ```
 
@@ -67,7 +69,8 @@ In some workflows or cases, you may wish to remove a component from your reposit
 To do that, you can use [bit export](/docs/cli-export.html) `--eject` flag like in the following example:
 
 ```bash
-$ bit export bit.movie-app --eject
+bit export bit.movie-app --eject
+
 2 components were exported to Scope bit/movie-app
 ```
 

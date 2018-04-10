@@ -4,6 +4,8 @@ title: Test
 permalink: docs/cli-test.html
 layout: docs
 category: CLI Reference
+prev: cli-tag.html
+next: cli-untag.html
 ---
 Runs the tests of the specified component(s) using the configured tester.
 

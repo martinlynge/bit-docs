@@ -4,7 +4,7 @@ title: Component CI
 permalink: docs/bitsrc-component-ci.html
 layout: docs
 category: Bitsrc
-next: setup-authentication
+next: setup-authentication.html
 ---
 
 Bitsrc.io runs all build/test tasks for all components it hosts in their own isolated container.

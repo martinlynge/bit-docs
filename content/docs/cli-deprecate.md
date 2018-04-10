@@ -4,6 +4,8 @@ title: Deprecate
 permalink: docs/cli-deprecate.html
 layout: docs
 category: CLI Reference
+prev: cli-config.html
+next: cli-export.html
 ---
 Marks a local/remote component as deprecated
 

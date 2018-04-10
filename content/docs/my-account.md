@@ -3,6 +3,8 @@ id: my-account
 title: My account
 permalink: docs/my-account.html
 layout: docs
+prev: setup-authentication.html
+next: scopes-on-bitsrc.html
 ---
 
 Manage your account. Make it awesome.

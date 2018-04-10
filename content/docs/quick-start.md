@@ -12,9 +12,7 @@ Follow these steps to learn the basics that you need to start working with Bit.
 We'll start by choosing a project and components to share from it, all the way to importing and using them in any other project with your favorite tools.  
 When finished, you will also have a beautiful gallery of components ready to share with your team.
 
-Let's get started with these 4 quick steps:
-
-## 1. Install bit
+### Install bit
 
 ```bash
 npm install bit-bin -g
@@ -22,11 +20,11 @@ npm install bit-bin -g
 
 See additional [installation methods](/docs/installation.html).
 
-## 2. Choose components to share
+### Choose components to share
 
-Choose a component from your own project, or use one of the examples available [here](/docs/quick-start.html#example-projects)
+Choose a component from your own project, or use one of the examples available [here](/docs/quick-start.html#example-projects).
 
-### 3. Init Bit for your project
+### Init Bit for your project
 
 Run this command to [initialize a Bit workspace](/docs/initializing-bit.html).
 
@@ -35,9 +33,9 @@ $ cd project-directory
 $ bit init
 ```
 
-### 4. Track files (components) with Bit
+### Track files (components) with Bit
 
-Bit [tracks and isolates](/docs/isolating-and-tracking-components.html) files in your repository and set them as components.  
+Bit [isolates and tracks](/docs/isolating-and-tracking-components.html) files in your repository and set them as components.  
 To track components use `bit add`.
 
 ```bash
@@ -48,7 +46,7 @@ Bit automatically scans the files it tracks for their dependencies (packages and
 
 > **Tip**
 >
-> Use the [`bit status`](/docs/cli-status.html) to verify that each component's dependency graph was successfully built and resolved by Bit.
+> Use the [bit status](/docs/cli-status.html) command to verify that each component's dependency graph was successfully built and resolved.
 
 #### Example
 
@@ -79,7 +77,7 @@ $ tree
 5 directories, 13 files
 ```
 
-To track these files as components we can use the [`bit add`](/docs/cli-add.html) with a glob pattern.
+To track these files as components we can use the [bit add](/docs/cli-add.html) with a glob pattern.
 
 ```bash
 $ bit add src/components/*
@@ -94,11 +92,11 @@ Read more about adding [build environment](docs/building-components.html) and [t
 
 Here is a list of [curated build and test environments](https://bitsrc.io/bit/envs), for you to get started quickly.
 
-You can [specify the relevant test files](/docs.bitsrc.io/docs/isolating-and-tracking-components.html#tracking-a-component-with-testspec-files) for your components in the `bit add` command to let Bit know they should be part of your components.
+You can [specify the component's test files](/docs/isolating-and-tracking-components.html#tracking-a-component-with-testspec-files) with the `bit add` command and  `--test` flag, to let Bit know these are test files and should be part of your component.
 
-### Version a component
+### Version components
 
-[Setting a version for a component](/docs/versioning-tracked-components.html) locks the state of the component files and the dependency graph, and sets a semantic version to the component, thus making each component-version immutable. When tagging a component, all its build and test tasks will run, and only if all is working correctly, Bit will version the component.
+[Setting a version for a component](/docs/versioning-tracked-components.html) locks the state of the component's files and the dependency graph, and sets a semantic version to the component, thus making each component-version immutable. When tagging a component, all its build and test tasks will run, and only if all is working correctly, Bit will version the component.
 
 ```bash
 $ bit tag --all 1.0.0
@@ -106,37 +104,37 @@ $ bit tag --all 1.0.0
 added components:  components/button@1.0.0, components/login@1.0.0, components/logo@1.0.0
 ```
 
-## Export Versioned Components
+### Export versioned components
 
-### Create a Scope
+#### Create a Scope
 
-In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and afterward create a Scope. A Scope is a remote Bit directory, similar to a `git` repository, that can host and manage components.
+In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and then create a Scope. A [Scope](/docs/scopes-on-bitsrc.html) is a remote Bit directory, similar to a `git` repository, that can host and manage components.
 
-There is more to learn about [managing components in Scopes](/docs/organizing-components-in-scopes.html). You can check out some example Scopes we created for **[React components](https://bitsrc.io/bit/movie-app)**.
+There is more to learn about [managing components in Scopes](/docs/organizing-components-in-scopes.html). You can check out some example Scopes we created for [React components](https://bitsrc.io/bit/movie-app).
 
-### Export components
+#### Export components
 
-Unlike publishing packages, this will *not* change the project's source code or force you to set up any additional repositories.
+Unlike publishing packages, [exporting](/docs/cli-export.html) a component will *not* change the project's source code or force you to set up any additional repositories.
 
 ```bash
 $ bit export username.scopename  # Share components to this Scope
 exported 3 components to scope username.scopename
 ```
 
-## Use Components in Other Projects
+### Use components in other projects
 
-### Install with NPM / Yarn
+#### Install with NPM / Yarn
 
 Components shared to Bit can automatically be installed with the NPM / Yarn client or with any package manager that implements the [CommonJS package registry specification](http://wiki.commonjs.org/wiki/Packages/Registry).
 
 You can now install the components you just exported [with NPM / Yarn](/docs/installing-components-with-package-managers.html). This allows projects and developers which are not familiar with Bit, to still use your Bit components.
 
-It is also possible to [source the components directly to another project](/docs/importing-components.html), using Bit. If you choose to source your components, you can also modify them later from the consumer project, and export the modifications back to [bitsrc.io](bitsrc.io) as a new version for that component.
+It is also possible to [source the components directly to another project](/docs/importing-components.html), using Bit. If you choose to source your components, you can also modify them later from the consumer project, and export the modifications back to [bitsrc.io](https://bitsrc.io) as a new version for that component.
 
 ## Example Projects
 
 Want more examples? We've created a few example projects that will help you learn how to use bit (don't forget to take a look at each project's `readme` file on [GitHub](github.com)):
-* A [React movie-app](https://github.com/teambit/movie-app) with UI components, and a [matching collection](https://bitsrc.io/bit/movie-app) of components shared from this App with Bit.
+* A [React movie-app](https://github.com/teambit/movie-app) with UI components, and a [matching Scope collection](https://bitsrc.io/bit/movie-app) of components shared from this App with Bit.
 * [Ramda with Bit](https://github.com/teambit/ramda), and a [matching collection](https://bitsrc.io/bit/ramda) of individual components from the library.
 
 ## Summary

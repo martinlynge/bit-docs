@@ -31,14 +31,14 @@ You can now go take a look at the `env` configuration in your [bit.json](/docs/c
 
 #### Curated list of test environments on Bitsrc.io
 
-You can find a list of Test Environments maintained by the [bitsrc.io](bitsrc.io) team [here](https://bitsrc.io/bit/envs).
+You can find a list of **Test environments** maintained by the [bitsrc.io](bitsrc.io) team [here](https://bitsrc.io/bit/envs).
 
 - [Mocha](https://bitsrc.io/bit/envs/testers/mocha).
 - [Jest](https://bitsrc.io/bit/envs/testers/jest).
 
 ### Adding test/spec files to your components
 
-Bit is not going to guess which files are your spec files, right? You should [track your spec files correctly](/docs/cli-add.html#track-a-component-with-a-test-file).
+Bit is not going to guess which files are your spec files, right? You should [track your spec files correctly](/docs/cli-add.html#tracking-a-component-with-a-test-file).
 
 ### Test your component
 

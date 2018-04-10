@@ -4,8 +4,10 @@ title: Init
 permalink: docs/cli-init.html
 layout: docs
 category: CLI Reference
+prev: cli-install.html
+next: cli-link.html
 ---
-Initializes an empty Bit Scope or reinitialize an existing one. This will create a `bit.json` file, and a `.bit` folder, which will contain Bit's objects & models.
+Initializes an empty Bit Scope. This will create a `bit.json` file, and a `.bit` folder, which will contain Bit's objects & models.
 
 ## Synopsis
 

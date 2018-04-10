@@ -4,6 +4,7 @@ title: Extending Bit
 permalink: docs/ext-concepts.html
 layout: docs
 category: Extending Bit
+next: ext-using-extensions.html
 ---
 
 Bit's extension system allows you to add custom actions during a component's lifecycle, and invoke custom commands on a bit component, in its [isolated environment](#what-is-an-isolated-component-environment).

@@ -4,6 +4,8 @@ title: List
 permalink: docs/cli-list.html
 layout: docs
 category: CLI Reference
+prev: cli-link.html
+next: cli-log.html
 ---
 Shows a list of all available components in a local or a remote Scope.
 

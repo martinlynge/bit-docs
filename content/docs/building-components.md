@@ -4,19 +4,19 @@ title: Building Components
 permalink: docs/building-components.html
 layout: docs
 category: Getting Started
-prev: importing-components.html
+prev: merge-versions.html
 next: testing-components.html
 ---
 
-Bit components can be built from any execution environment using Bit's [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment). Build components after making changes from any environment and be project setup agnostic.
+Bit components can be built from any execution environment using Bit's [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment).
 
-The build process of bit components is done in an [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment), using [compilers](/docs/ext-compiling.html), which are environments - a special kind of [extension](/docs/ext-concepts.html#extensions-vs-environments).
+The build process of bit components is done in an [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment), using [compilers](/docs/ext-compiling.html), environments - a special kind of [extension](/docs/ext-concepts.html#extensions-vs-environments).
 
 In order to build a component, you need to have a compiler defined.
 
 ### Defining a default compiler for your project
 
-A compiler is defined per [Scope](/docs/what-is-bit.html#what-is-a-scope-collection). Once defined, building a component within that Scope will build the component using the defined compiler.
+A compiler is defined per [Scope](/docs/scopes-on-bitsrc.html). Once defined, building a component within that Scope will build the component using the defined compiler.
 In order to do that, just [import the compiler](/docs/cli-import.html#import-a-new-environment):
 
 ```bash

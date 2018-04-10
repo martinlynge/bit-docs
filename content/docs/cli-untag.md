@@ -4,6 +4,8 @@ title: Untag
 permalink: docs/cli-untag.html
 layout: docs
 category: CLI Reference
+prev: cli-test.html
+next: cli-untrack.html
 ---
 Reverts tagging of a component(s) - Removes a staged version(s).
 

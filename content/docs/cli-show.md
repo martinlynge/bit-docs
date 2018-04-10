@@ -4,6 +4,8 @@ title: Show
 permalink: docs/cli-show.html
 layout: docs
 category: CLI Reference
+prev: cli-remove.html
+next: cli-status.html
 ---
 Shows component overview.
 
