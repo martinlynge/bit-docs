@@ -82,7 +82,7 @@ When Bit specifies that a component status is `ok`, it means that the dependency
 
 Some projects have multiple components in them, and are also structured in that manner. If this is the case in your project (or even for a part of your project), you can apply glob patterns using [bit add](/docs/cli-add.html).
 
-Let's use this folder structure from a random [React](https://reactjs.com) application as an example:
+Let's use this folder structure from a random [React](https://reactjs.org) application as an example:
 
 ```bash
 $ tree

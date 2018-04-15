@@ -12,7 +12,7 @@ Imports a component to your project from a remote Scope.
 ## Synopsis
 
 ```bash
-bit import|i [-t|--tester] [-w|--write] [-v|--verbose] [-c|--compiler] [-e|--environment] [--extension] [-p|--path <directory>] [-d|--display-dependencies] [-f|--force] [--dist] [--conf] [--no-package-json] [ids...]
+bit import|i [-t|--tester] [-w|--write] [-v|--verbose] [-c|--compiler] [-e|--environment] [--extension] [-p|--path <directory>] [-d|--display-dependencies] [-O|--override] [--dist] [--conf] [--no-package-json] [ids...]
 ```
 
 ## Examples
@@ -88,10 +88,11 @@ bit import bit.extensions/commands/pack --extension
 ### Pass an extra arguments to npm
 
 In order to pass extra arguments to an npm client, place the arguments after `--`.
-  
+
 ```bash
 bit import -- --production --no-optional
 ```
+
 ## Options
 
 **-t, --tester**
@@ -143,12 +144,12 @@ Display the imported dependencies
 bit import username.foo/bar --display-dependencies
 ```
 
-**-f, --force**
+**-O, --override**
 
 Ignore local changes (import a component's new version even though it was changed locally).
 
 ```bash
-bit import username.foo/bar --force
+bit import username.foo/bar --override
 ```
 
 **--dist**

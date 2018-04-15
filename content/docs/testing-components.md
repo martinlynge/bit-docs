@@ -5,7 +5,7 @@ permalink: docs/testing-components.html
 layout: docs
 category: Getting Started
 prev: building-components.html
-next: removing-components.html
+next: rendering-components.html
 ---
 
 Bit can run the component's tests in an [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment).

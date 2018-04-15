@@ -86,9 +86,9 @@ There are many cases for merge conflicts in component. You can find a complete l
 
 ## Exporting a modified version of a sourced component
 
-After you've modified a sourced component, you can [tag it](/docs/versioning-tracked-components.html), and then [export](/organizing-components-in-scopes.html#organizing-components-in-a-single-scope) to a new remote scope, or to the original one, if you have the appropriate permissions.
+After you've modified a sourced component, you can [tag it](/docs/versioning-tracked-components.html), and then [export](/organizing-components-in-scopes) to a new remote Scope, or to the original one, if you have the appropriate permissions.
 
-In case you're exporting the modified component to its original scope, you should take care of merge conflicts. Currently, Bit doesn't yet know how to handle merge conflicts. This means you should avoid them altogether by not exporting a new version before getting the newest one from the scope.
+In case you're exporting the modified component to its original cope, you should take care of merge conflicts. Currently, Bit doesn't yet know how to handle merge conflicts. This means you should avoid them altogether by not exporting a new version before getting the newest one from the Scope.
 
 > **Checking for updates on a sourced component**
 >
@@ -96,7 +96,7 @@ In case you're exporting the modified component to its original scope, you shoul
 
 So, in case there's a newer remote version, the correct order of actions would be:
 
-1. [Get the latest version](#getting-an-updated-version-of-a-component) from the remote scope.
+1. [Get the latest version](#getting-an-updated-version-of-a-component) from the remote Scope.
 2. [Tag](/docs/cli-tag.html)
 3. [Export](/dpcs/cli-export.html)
 
@@ -124,7 +124,7 @@ successfully imported one component
 - bit.example/string/left-pad@0.0.2
 ```
 
-After getting the latest version, we can change our code, and then tag and export the new version. Note that exporting a component to a remote scope requires you to be a collaborator on that scope.
+After getting the latest version, we can change our code, and then tag and export the new version. Note that exporting a component to a remote Scope requires you to be a collaborator on that Scope.
 
 ```bash
 $ bit tag string/left-pad
@@ -135,8 +135,8 @@ $ bit export bit.example string/left-pad
 exported 1 components to scope bit.example
 ```
 
-That's it! The component had been sourced and modified, and a new version has been exported back to the source-of-truth - the remote scope.
+That's it! The component had been sourced and modified, and a new version has been exported back to the source-of-truth - the remote Scope.
 
 ### Sourcing and modifying someone else's component
 
-The above scenario deals with sourcing and modifying a component and then exporting it back to its original remote scope. That's only possible if you're a collaborator on that remote scope. Sometimes, you may want to source and modify someone else's component. This works exactly the same, except for the exporting. You can choose to modify the component and use it locally without exporting, but on the other hand, you can also choose to export it to a different remote scope, and so create a new source-of-truth.
+The above scenario deals with sourcing and modifying a component and then exporting it back to its original remote Scope. That's only possible if you're a collaborator on that remote Scope. Sometimes, you may want to source and modify someone else's component. This works exactly the same, except for the exporting. You can choose to modify the component and use it locally without exporting, but on the other hand, you can also choose to export it to a different remote Scope, and so create a new source-of-truth.

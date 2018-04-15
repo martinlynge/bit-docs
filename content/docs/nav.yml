@@ -30,10 +30,6 @@
       title: Removing Components
     - id: documenting-components
       title: Documenting Components
-- title: Bit Basics
-  items:
-    - id: about-bit
-      title: About
 - title: Extending Bit
   items:
     - id: ext-concepts

@@ -12,17 +12,17 @@ Removes a component - will delete a specific version, or the entire component an
 ## Synopsis
 
 ```bash
-bit remove|rm [-f|--force] [-d|--delete-files] [-t|--track] <ids...>
+bit remove|rm [-r|--remote] [-f|--force] [-d|--delete-files] [-t|--track] <ids...>
 ```
 
 ## Examples
 
 ### Remove a component from its remote Scope
 
-In order to remove a component from a [remote Scope](/docs/organizing-components-in-scopes.html#create-a-remote-scope), just specify the [full component id](/docs/isolating-and-tracking-components.html#automatic-component-id-resolution).
+In order to remove a component from a [remote Scope](/docs/organizing-components-in-scopes.html#create-a-remote-scope), just specify the [full component id](/docs/isolating-and-tracking-components.html#automatic-component-id-resolution) and add the remote flag `--remote `.
 
 ```bash
-bit remove username.your-scope/foo/bar
+bit remove username.your-scope/foo/bar --remote
 ```
 
 > **Note**
@@ -93,6 +93,14 @@ bit remove foo/bar --track
 > If you've [tracked](/docs/isolating-and-tracking-components.html) and [tagged](/docs/versioning-tracked-components.html) two components, and one depends on the other, removing it will remove its dependency as well.
 
 ## Options
+
+**-r, --remote**
+
+Remove the component from a remote Scope. 
+
+```bash
+bit remove foo/bar --remote
+```
 
 **-f, --force**
 

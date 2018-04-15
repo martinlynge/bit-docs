@@ -8,18 +8,18 @@ prev: versioning-tracked-components.html
 next: installing-components-using-package-managers.html
 ---
 
-A [Scope](/docs/what-is-bit.html#what-is-a-scope-collection) is a curated and dynamic collection of shared components. You can think of it as a component “playlist” that works as a remote location for syncing components between your different repositories while keeping one source of truth.
+A [Scope](/docs/scopes-on-bitsrc.html#scopes) is a curated and dynamic collection of shared components. You can think of it as a component “playlist” that works as a remote location for syncing components between your different repositories while keeping one source of truth.
 
 Scopes are easy and cheap to create for any purpose. You can create a Scope for specific projects, ideas, teams or anything you can imagine.  
-In order to organize tagged components from your project and make them available for reuse by other people or repositories, you will need to create a remote [Scope](/docs/what-is-bit.html#what-is-a-scope-collection) and export components to it.  
+In order to organize tagged components from your project and make them available for reuse by other people or repositories, you will need to create a remote [Scope](/docs/scopes-on-bitsrc.html) and export components to it.  
 For example, you can create a Scope for components shared from a project your team is working on, for the [UI Components](https://bitsrc.io/bit/movie-app) of your entire organization or even for shared GraphQL schemas.
 
-Remote [Scopes](/docs/what-is-bit.html#what-is-a-scope-collection) can be connected to each other to form a [Scope](/docs/what-is-bit.html#what-is-a-scope-collection) dependency graph. This allows you to create dependencies between components that are hosted on different Scopes. Each Scope caches all the dependencies of its own components to keep all components available and consistent.
+Remote Scopes can be connected to each other to form a Scope dependency graph. This allows you to create dependencies between components that are hosted on different Scopes. Each Scope caches all the dependencies of its own components to keep all components available and consistent.
 
 ## Creating a remote Scope
 
-[Scopes](/docs/what-is-bit.html#what-is-a-scope-collection) are distributed and lightweight and can be [set up on any server](/docs/conf-bit-on-the-server.html).  
-You can also freely host your [Scopes](/docs/what-is-bit.html#what-is-a-scope-collection) on the Bit community hub, [bitsrc.io](https://bitsrc.io).
+[Scopes](/docs/scopes-on-bitsrc.html#scopes) are distributed and lightweight and can be [set up on any server](/docs/conf-bit-on-the-server.html).  
+You can also freely host your [Scopes](/docs/scopes-on-bitsrc.html) on the Bit community hub, [bitsrc.io](https://bitsrc.io).
 
 ### Self-managed Scope
 

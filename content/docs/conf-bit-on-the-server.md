@@ -4,6 +4,8 @@ title: Bit on the Server
 layout: docs
 category: How Bit Works
 permalink: docs/conf-bit-on-the-server.html
+prev: conf-bit-json.html
+next: conf-config.html
 ---
 
 Bit is up and foremost a collaboration tool. In order to actually collaborate bit components, you'll need to set up a remote server (well, to be technically correct - you can import/export components directory from individual Scopes, but it's hard to manage and use).

@@ -4,6 +4,8 @@ title: bit.json
 permalink: docs/conf-bit-json.html
 layout: docs
 category: Configuring Bit
+next: conf-bit-on-the-server.html
+
 ---
 
 The `bit.json` file is your [workspace] configuration file. This document specifies all the different configurations that are set in the file.
@@ -142,4 +144,4 @@ The `dist` section configures:
 ### extensions : object
 
 The `extension` section configures your [extensions](/docs/ext-concepts.html). Those will be listed here after your [import](/docs/cli-import.html#import-an-extension) them.
-The extension's configuration and options are listed for each extension. You can find out more about these [here](/docs/ext-concepts.html#configuration-and-options).
+The extension's configuration and options are listed for each extension. 

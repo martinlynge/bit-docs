@@ -7,7 +7,7 @@ permalink: tutorial/react-tutorial.html
 Bit enables you to share and sync source code components between different SCM repositories and projects.
 React is known for its ease in separation and reuse of components, and as such, it's perfect for combining with Bit.
 
-Here is [an example](https://bitsrc.io/bit/movie-app) of a React [Scope](/docs/what-is-bit.html#what-is-a-scope-component-collection) of individually available React components shared from this [GitHub library](https://github.com/itaymendel/movie-app). These components are ready to be installed and updated in different projects.
+Here is [an example](https://bitsrc.io/bit/movie-app) of a React [Scope](/docs/scopes-on-bitsrc.html#scopes) of individually available React components shared from this [GitHub library](https://github.com/itaymendel/movie-app). These components are ready to be installed and updated in different projects.
 
 ## Before We Start
 

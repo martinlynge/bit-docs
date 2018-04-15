@@ -4,7 +4,7 @@ title: Installing the Latest Stable Version of Bit
 permalink: docs/latest-version.html
 layout: docs
 category: Troubleshooting
-next: authentication-issues
+next: authentication-issues.html
 ---
 
 If you're experiencing issues while using an old version of bit, please try install the latest version.

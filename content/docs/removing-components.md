@@ -16,7 +16,7 @@ There are many cases when its necessary to remove a component. You can remove co
 
 ## Removing a component from a remote Scope
 
-In order to remove a component from a [remote Scope](/docs/organizing-components-in-scopes.html#create-a-remote-scope), just specify the [full component id](/docs/isolating-and-tracking-components.html#automatic-component-id-resolution).
+In order to remove a component from a [remote Scope](/docs/organizing-components-in-scopes), just specify the [full component id](/docs/isolating-and-tracking-components.html#automatic-component-id-resolution).
 
 ```bash
 $ bit remove username.your-scope/foo/bar

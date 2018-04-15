@@ -119,7 +119,7 @@ function packAction([componentId, ScopePath], { json, outDir, override }){
 
 ### Registering a command
 
-If you want to develop an [extension that creates a custom Bit Command](/docs/ext-concepts.html#extensions-as-a-command), you should use the `registerCommand` API function:
+If you want to develop an extension that creates a custom Bit Command, you should use the `registerCommand` API function:
 
 `registerCommand` expects a `Command` object as an argument, and then adds it to Bit's available commands - you'll also be able to see the command under `bit --help`, and see the command's detaild help under `bit <command name> --help`.
 
@@ -327,4 +327,4 @@ const packAction = (args, headers) => {
 
 ## Debugging an extension
 
-In order to debug your extension code, set the extension's [options.file](/docs/ext-concepts.html#options)'s value to the path of the file you're working on.
+In order to debug your extension code, set the extension's options.file value to the path of the file you're working on.

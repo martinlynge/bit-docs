@@ -4,6 +4,8 @@ title: Configuring Bit
 permalink: docs/conf-config.html
 layout: docs
 category: Configuring Bit
+prev: conf-bit-on-the-server.html
+next: conf-analytics.html
 ---
 
 Bit's general configuration affects communication with the hub.
