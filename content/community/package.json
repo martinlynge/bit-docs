@@ -1,6 +1,6 @@
 {
   "name": "@bit/bit.docs.content.community",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "homepage": "https://bitsrc.io/bit/docs/content/community",
   "main": "index.js",
   "dependencies": {},

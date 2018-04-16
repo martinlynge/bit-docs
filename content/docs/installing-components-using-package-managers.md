@@ -27,7 +27,7 @@ Bit can be configured as a registry with any CommonJS compatible client such as 
 Bit can be configured as a [scoped registry](https://docs.npmjs.com/misc/scope#associating-a-scope-with-a-registry) and can be associated with any scope name.
 
 ```bash
-npm config set @bit:registry https://node.bitsrc.io
+npm config set '@bit:registry' https://node.bitsrc.io
 ```
 
 To install private components from [bitsrc.io](https://bitsrc.io), use `npm login` to associate Bit with an authenticated scope. Use your Bit credentials to login.

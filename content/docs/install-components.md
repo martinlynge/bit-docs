@@ -16,7 +16,7 @@ If you are importing a component using `bit import`, and you get a message simil
 
 **NPM**
 
-```bash 
+```bash
 failed running npm install at /Users/iteymendel/devenv/example-npm-error/components/utils/string/pad-left
 npm ERR! code E404
 npm ERR! 404 Not Found: @bit/bit.utils.string.pad-left@0.0.1
@@ -35,6 +35,12 @@ To do so, run the following command and use your [bitsrc.io](bitsrc.io) credenti
 
 ```bash
 npm login --registry=https://node.bitsrc.io --scope=@bit
+```
+
+Or without authentication to Bit (for public component only):
+
+```bash
+npm config set '@bit:registry' https://node.bitsrc.io
 ```
 
 Read more about this feature [here](https://docs.bitsrc.io/docs/installing-components-using-package-managers.html).
