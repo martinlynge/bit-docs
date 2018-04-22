@@ -82,7 +82,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/community"
     },
-    "bit.docs/content/docs@0.0.9": {
+    "bit.docs/content/docs@0.0.11": {
         "files": [
             {
                 "name": "rendering-components.md",

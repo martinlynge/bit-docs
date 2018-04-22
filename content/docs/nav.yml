@@ -18,8 +18,8 @@
       title: Importing Components
     - id: updating-sourced-components
       title: Updating Sourced Components
-    - id: merge-versions
-      title: Merge Component Versions
+    - id: merge-changes
+      title: Merging Component Changes
     - id: building-components
       title: Building Components
     - id: testing-components
@@ -102,6 +102,8 @@
       title: list
     - id: cli-log
       title: log
+    - id: cli-login
+      title: login
     - id: cli-merge
       title: merge
     - id: cli-move

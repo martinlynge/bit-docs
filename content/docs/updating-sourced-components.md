@@ -5,7 +5,7 @@ permalink: docs/updating-sourced-components.html
 layout: docs
 category: Getting Started
 prev: importing-components.html
-next: merge-versions.html
+next: merge-changes.html
 ---
 
 Bit allows you to source components and easily update them, even when you're not the original author. This section explains how it works.
@@ -69,7 +69,7 @@ Now issue the `bit checkout` command to use the latest version of `string/contai
 ```bash
 $ bit checkout 1.0.1 string/contains
 successfully switched bit.example/string/contains to version 1.0.4
- 
+
 updated src/pad-left/contains.spec.js
 updated src/pad-left/index.js
 updated src/pad-left/contains.js
@@ -78,65 +78,35 @@ updated src/pad-left/contains.js
 ### Updating a sourced component that has local changes
 
 In case that you have a sourced component that has been modified locally that has a newer version on the remote Scope, you will need to merge all local changes with the new remote version.  
-Merging components is explained in details [here](/docs/merge-versions.html).
+Merging components is explained in details [here](/docs/merge-changes.html).
 
 ## Handling merge conflicts
 
-There are many cases for merge conflicts in component. You can find a complete list of them and how to handle them [here](/docs/merge-versions.html)
+There are many cases for merge conflicts in component. You can find a complete list of them and how to handle them [here](/docs/sync-components.html).
 
 ## Exporting a modified version of a sourced component
 
-After you've modified a sourced component, you can [tag it](/docs/versioning-tracked-components.html), and then [export](/organizing-components-in-scopes) to a new remote Scope, or to the original one, if you have the appropriate permissions.
+When you have a modified component, you [tag](/docs/versioning-tracked-components.html) and [export](/docs/organizing-components-in-scopes.html) it as a new version, to the remote Scope.
 
-In case you're exporting the modified component to its original cope, you should take care of merge conflicts. Currently, Bit doesn't yet know how to handle merge conflicts. This means you should avoid them altogether by not exporting a new version before getting the newest one from the Scope.
+### Get remote changes before setting a version
 
-> **Checking for updates on a sourced component**
+You should check whether there have been any remote changes to the component. To fetch remote changes, use [bit import](/docs/cli-import.html). And [merge](/docs/merge-changes.html) remote changes to the modified component.
+
+> **Check for remote changes **
 >
-> You can easily check whether there have been any changes remotely made to the component using the [bit list](/docs/cli-list.html#show-the-local-and-remote-versions-of-all-local-components) with the `outdated` option.
+> You can check for updated remote component versions before fetching them to the local Scope using the [bit list --outdated](/docs/cli-list.html/#show-the-local-and-remote-versions-of-all-local-components) flag.
 
-So, in case there's a newer remote version, the correct order of actions would be:
+### Tag a new version
 
-1. [Get the latest version](#getting-an-updated-version-of-a-component) from the remote Scope.
-2. [Tag](/docs/cli-tag.html)
-3. [Export](/dpcs/cli-export.html)
-
-For example, let's say someone else has exported a new version for `string/left-pad`. We'll discover that by running `bit list --outdated`.
+In the previous example, you updated `string/contains` sourced component. Now you can modify the component. After you have modified it, set a new version for it, and export back to the remote Scope.
 
 ```bash
-$ bit list --outdated
-found 2 components in local scope
-
-  ┌─────────────────────────────────────────────────┬────────┬────────┐
-  │Id                                               │Local   │Remote  │
-  │                                                 │Version │Version │
-  ├─────────────────────────────────────────────────┼────────┼────────┤
-  │bit.example/string/contains        │0.0.1   │0.0.1   │
-  ├─────────────────────────────────────────────────┼────────┼────────┤
-  │bit.example/string/left-pad        │0.0.1   │0.0.2   │
-  └─────────────────────────────────────────────────┴────────┴────────┘
-```
-
-We can see `string/left-pad` has a new remote version - 0.0.2. Let's get the new version.
-
-```bash
-$ bit import bit.example/string/left-pad
-successfully imported one component
-- bit.example/string/left-pad@0.0.2
-```
-
-After getting the latest version, we can change our code, and then tag and export the new version. Note that exporting a component to a remote Scope requires you to be a collaborator on that Scope.
-
-```bash
-$ bit tag string/left-pad
+$ bit tag string/contains --major
 1 components tagged | 0 added, 1 changed, 0 auto-tagged
-changed components:  bit.example/string/left-pad@0.0.3
+changed components:  bit.example/string/contains@1.1.0
 
-$ bit export bit.example string/left-pad
+$ bit export bit.example string/contains
 exported 1 components to scope bit.example
 ```
 
-That's it! The component had been sourced and modified, and a new version has been exported back to the source-of-truth - the remote Scope.
-
-### Sourcing and modifying someone else's component
-
-The above scenario deals with sourcing and modifying a component and then exporting it back to its original remote Scope. That's only possible if you're a collaborator on that remote Scope. Sometimes, you may want to source and modify someone else's component. This works exactly the same, except for the exporting. You can choose to modify the component and use it locally without exporting, but on the other hand, you can also choose to export it to a different remote Scope, and so create a new source-of-truth.
+That's it! The sourced component has been modified, and exported back to the remote with a new version.

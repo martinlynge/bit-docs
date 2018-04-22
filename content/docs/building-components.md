@@ -4,7 +4,7 @@ title: Building Components
 permalink: docs/building-components.html
 layout: docs
 category: Getting Started
-prev: merge-versions.html
+prev: merge-changes.html
 next: testing-components.html
 ---
 

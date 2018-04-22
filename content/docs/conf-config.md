@@ -8,11 +8,11 @@ prev: conf-bit-on-the-server.html
 next: conf-analytics.html
 ---
 
-Bit's general configuration affects communication with the hub.
+Bit's general configuration affects your communication with the hub.
 
-## Config command
+## Config commands
 
-All configs are set using the [config](/docs/cli-config.html) command.
+All configs are sets using the [config](/docs/cli-config.html) command.
 
 ## General configuration
 
@@ -23,13 +23,13 @@ All configs are set using the [config](/docs/cli-config.html) command.
 
 ## Configure your identity
 
-The first thing you should do when you [install Bit](/docs/installation.html) is set your user name and email address. This is important because every component's version uses this information, and it’s immutable after you perform a tag.
+Make sure to set a user name and email address when you [install Bit](/docs/installing-bit.html). Every component's version uses this information, and it’s immutable after you perform `bit tag`.
 
-In order to streamline this process, if you are using Git, and already set up your identity in your global Git configuration (`git config` for `user.name` and `user.email`), By default, Bit will use read these settings, and use them.
+In order to streamline this process, if you are using Git and have already set up your identity in your global Git configuration (`git config` for `user.name` and `user.email`), By default, Bit will read these settings, and use them.
 
-If you do not use Git, you should set your email and name according to this command:
+If you do not use Git, set your user name and email address according to this command:
 
 ```bash
-bit config set user.name "mickey mouse"
-bit config set user.email mickey@example.com
+$ bit config set user.name "mickey mouse"
+$ bit config set user.email mickey@example.com
 ```

@@ -7,15 +7,15 @@ category: Troubleshooting
 next: authentication-issues.html
 ---
 
-If you're experiencing issues while using an old version of bit, please try install the latest version.
+If you are experiencing issues when using an old version of Bit, please try installing the latest one.
 
-## See what version of bit you're running
+## Check Bit's version
 
 ```bash
 $ bit -V
 0.12.0
 ```
 
-## Updating bit
+## Update version
 
-You should upgrade to the latest version of bit according to your [installation method](/docs/installation.html).
+Upgrade to Bit's latest version according to your [installation method](/docs/installing-bit.html).
