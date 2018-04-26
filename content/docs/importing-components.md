@@ -242,7 +242,7 @@ modified components
 
 ## Upgrade a dependency of sourced components
 
-Imported (sourced) components are isolated from the project's environment (using its own `node_modules` directory, a dedicated build flow, etc). This means that updating its dependencies needs to happen in the component's isolated environment - i.e the folder its imported too.
+Imported (sourced) components are isolated from the project's environment (using its own `node_modules` directory, a dedicated build flow, etc). This means that updating its dependencies needs to happen in the component's isolated environment - i.e the folder it's imported to.
 
 Below described the steps Bit takes in order to determine the component's dependencies and their versions.
 
