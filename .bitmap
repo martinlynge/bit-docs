@@ -27,6 +27,11 @@
     "bit.docs/content/community@0.0.4": {
         "files": [
             {
+                "name": "LICENSE",
+                "relativePath": "LICENSE",
+                "test": false
+            },
+            {
                 "name": "articles.md",
                 "relativePath": "articles.md",
                 "test": false
@@ -70,11 +75,6 @@
                 "name": "videos.md",
                 "relativePath": "videos.md",
                 "test": false
-            },
-            {
-                "name": "LICENSE",
-                "relativePath": "LICENSE",
-                "test": false
             }
         ],
         "mainFile": "index.js",
@@ -82,7 +82,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/community"
     },
-    "bit.docs/content/docs@0.0.11": {
+    "bit.docs/content/docs@0.0.12": {
         "files": [
             {
                 "name": "rendering-components.md",
