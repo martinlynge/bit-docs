@@ -8,6 +8,7 @@ prev: merge-changes.html
 next: testing-components.html
 ---
 
+
 Bit components can be built from any execution environment using Bit's [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment).
 
 The build process of bit components is done in an [isolated component environment](/docs/ext-concepts.html#what-is-an-isolated-component-environment), using [compilers](/docs/ext-compiling.html), environments - a special kind of [extension](/docs/ext-concepts.html#extensions-vs-environments).

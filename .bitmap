@@ -385,5 +385,5 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/docs"
     },
-    "version": "0.12.11"
+    "version": "0.12.12-dev.4"
 }

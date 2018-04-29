@@ -8,6 +8,7 @@ prev: isolating-and-tracking-components.html
 next: organizing-components-in-scopes.html
 ---
 
+
 Versioning tracked components in a repository helps create a higher-level contracts, for the safe reuse of components between different repositories and users.
 
 Versioning components is essential when collaborating on components to avoid breaking the different applications the components are sourced to or used in. Component versioning can get complex in complex dependency graphs and Bit does a lot to make this process as easy and efficient as possible.
