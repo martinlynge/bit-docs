@@ -37,7 +37,7 @@
     - id: ext-using-extensions
       title: Using Extensions
     - id: ext-developing-extensions
-      title: Devloping Extensions
+      title: Developing Extensions
     - id: ext-compiling
       title: Compiling
     - id: ext-testing
