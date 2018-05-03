@@ -16,9 +16,9 @@ This is the first step in versioning and exporting tracked components to be late
 
 While component source-code instances can be distributed between many different repositories, components are kept in sync with a single source of truth (we'll get to that later).
 
-## Benefits of isolating a component
+## Why isolating components?
 
-- **Isolating** components helps you make sure that they are truly reusable, executable and will work in any other project or context.
+- **Isolating** code as a component ensures that they are truly reusable, executable and will work in any other project or context.
 - **Versioning** components in your repository creates a higher-level contract for the safe reuse of components in other repositories. For more information on tagging, you can head over to the [versioning tracked components section](/docs/versioning-tracked-components.html) in our docs.
 - **Tracking** component changes in a repository means all modifications will be tracked and visible through the [bit status](/docs/cli-status.html) command. This way you can get full visibility for changes made to every component in your project.
 - **Understanding components' dependency graph.** By analyzing and understanding the component's dependency graph, Bit can help you understand the exact requirements of a component's packages, files, etc. This also allows Bit to create an isolated environment for each individual component, so you can build, modify and test a component from any context.

@@ -6,5 +6,4 @@ layout: docs
 category: Configuring Bit
 ---
 
-
 overview for config... TODO 

@@ -19,7 +19,12 @@ All configs are sets using the [config](/docs/cli-config.html) command.
 * `ssh_key_file` - A path to an ssh key file, defaults to `~/.ssh/id_rsa` (not required).
 * `user.email` - The Email of the user, will be saved on the history logs (required).
 * `user.name` - The name of the user, will be saved on the history logs (required).
+* `user.token` - Authentication token for a [bitsrc.io](bitsrc.io) account. [As shown here](/docs/setup-authentication.html)
 * `hub_domain` - The domain of the default hub, defaults to `hub.bitsrc.io` (not required).
+* `analytics_reporting` - True/False indication to send anonymous usage data to Bit. [Read More](/docs/conf-analytics.html). By default it is set to `false`.
+* `anonymous_reporting` - True/False indication to remove all masks on anonymous usage data, rendering it not-anonymous. [Read more](/docs/conf-analytics.html). By default it is set to `true`.
+* `error_reporting` - True/False indication to send anonymous errors data to Bit. [Read More](/docs/conf-analytics.html). By default it is set to `false`.
+
 
 ## Configure your identity
 

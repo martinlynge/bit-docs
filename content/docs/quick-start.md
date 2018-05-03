@@ -4,12 +4,13 @@ title: Quick Start
 permalink: docs/quick-start.html
 layout: docs
 category: Getting Started
-next: installation.html
+next: installing-bit.html
 ---
 Using Bit - What to do?
 
-Follow these steps to learn the basics that you need to start working with Bit. 
-We'll start by choosing a project and components to share from it, all the way to importing and using them in any other project with your favorite tools.  
+Learn the basics so you can start working with Bit in your projects.
+
+Start by choosing a project and the components to share from it, all the way to importing and using them in any other project with your favorite tools.
 When finished, you will also have a beautiful gallery of components ready to share with your team.
 
 ### Install bit
@@ -18,7 +19,7 @@ When finished, you will also have a beautiful gallery of components ready to sha
 npm install bit-bin -g
 ```
 
-See additional [installation methods](/docs/installation.html).
+See additional [installation methods](/docs/installing-bit.html).
 
 ### Choose components to share
 
@@ -26,7 +27,7 @@ Choose a component from your own project, or use one of the examples available [
 
 ### Init Bit for your project
 
-Run this command to [initialize a Bit workspace](/docs/initializing-bit.html).
+[Initialize a Bit workspace](/docs/initializing-bit.html) in your project directory.
 
 ```bash
 $ cd project-directory
@@ -35,7 +36,7 @@ $ bit init
 
 ### Track files (components) with Bit
 
-Bit [isolates and tracks](/docs/isolating-and-tracking-components.html) files in your repository and set them as components.  
+Bit [isolates and tracks](/docs/isolating-and-tracking-components.html) files in your repository and set them as components. 
 To track components use `bit add`.
 
 ```bash
@@ -108,9 +109,18 @@ added components:  components/button@1.0.0, components/login@1.0.0, components/l
 
 #### Create a Scope
 
-In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and then create a Scope. A [Scope](/docs/scopes-on-bitsrc.html) is a remote Bit directory, similar to a `git` repository, that can host and manage components.
+In order to export a component, you need to [create a free account in bitsrc.io](https://bitsrc.io/signup), and then create a Scope. A [Scope](/docs/scopes-on-bitsrc.html) is a remote Bit Scope, similar to a git repository, that can host and manage components.  
+There is more to learn about [managing components in Scopes](/docs/organizing-components-in-scopes.html). Check out some example Scopes we created for [React components](https://bitsrc.io/bit/movie-app).
 
-There is more to learn about [managing components in Scopes](/docs/organizing-components-in-scopes.html). You can check out some example Scopes we created for [React components](https://bitsrc.io/bit/movie-app).
+#### Authenticate Bit CLI
+
+In order for the local Bit client to interact with resources you created for your [bitsrc.io](bitsrc.io) account, you need to authenticate the client.  
+Use `bit login` to open a login page in the browser. Enter your username and password and return to Bit-CLI to continue.
+
+```bash
+$ bit login
+Your browser has been opened to visit: http://bitsrc.io/bit-login?redirect_uri=http://localhost:8085...
+```
 
 #### Export components
 

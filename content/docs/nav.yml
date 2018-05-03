@@ -30,6 +30,14 @@
       title: Removing Components
     - id: documenting-components
       title: Documenting Components
+- title: FAQ
+  items:
+    - id: faq-what-is-bit
+      title: What Is Bit?
+    - id: faq-bit-basics
+      title: Bit Basics
+    - id: faq-how-do-i-work-with-bit
+      title: How Do I...
 - title: Extending Bit
   items:
     - id: ext-concepts
@@ -88,6 +96,8 @@
       title: config
     - id: cli-deprecate
       title: deprecate
+    - id: cli-diff
+      title: diff
     - id: cli-export
       title: export
     - id: cli-import
@@ -104,6 +114,8 @@
       title: log
     - id: cli-login
       title: login
+    - id: cli-logout
+      title: logout
     - id: cli-merge
       title: merge
     - id: cli-move

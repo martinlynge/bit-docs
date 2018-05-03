@@ -42,7 +42,7 @@ successfully imported 2 components
 - bit.example/string/contains@0.0.1
 ```
 
-## Getting an updated version of a component
+## Getting an updated version of a specific component
 
 If you wish to get the updated version of the sourced components, use [bit import](/docs/cli-import.html#import-projects-component-objects-from-their-remote-scope) to fetch all remote objects of your sourced components:
 
@@ -74,6 +74,16 @@ updated src/pad-left/contains.spec.js
 updated src/pad-left/index.js
 updated src/pad-left/contains.js
 ```
+
+## Understand the differences between versions of components
+
+Once you have imported a new version of a component, and you want to know the difference between the newly imported version, and the version currently in your working directory, you need to run the [bit diff](/docs/cli-diff.html) command on the imported component.
+
+```bash
+$ bit diff bit.example/string/contains
+```
+
+This will trigger `git diff` command for the component files. This means that if you have another 3rd party diff tool configured to your Git, it will be triggered.
 
 ### Updating a sourced component that has local changes
 

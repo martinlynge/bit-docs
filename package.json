@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "@bit/bit.docs.content.tutorial": "./content/tutorial",
+    "@bit/bit.docs.content.tutorial": "file:./content/tutorial",
     "@bit/bit.docs.content.community": "./content/community",
-    "@bit/bit.docs.content.docs": "./content/docs"
+    "@bit/bit.docs.content.docs": "file:./content/docs"
   }
 }

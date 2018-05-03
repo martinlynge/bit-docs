@@ -8,7 +8,6 @@ prev: isolating-and-tracking-components.html
 next: organizing-components-in-scopes.html
 ---
 
-
 Versioning tracked components in a repository helps create a higher-level contracts, for the safe reuse of components between different repositories and users.
 
 Versioning components is essential when collaborating on components to avoid breaking the different applications the components are sourced to or used in. Component versioning can get complex in complex dependency graphs and Bit does a lot to make this process as easy and efficient as possible.
@@ -24,7 +23,7 @@ Upon tagging, Bit will apply the actions below to make sure that the component d
 
 > **Bit and SemVer**
 >
-> Bit uses [SemVer](https://semver.org) to tag versions of components, and implements various strategies and flags to control them. Head over to the [bit tag CLI reference](/docs/cli-tag.html) to learn more about the various available versioning options.
+> Bit uses [SemVer](https://semver.org) to tag components versions and implement strategies to control them. See [bit tag](/docs/cli-tag.html) to learn more about various versioning options.
 
 ## Versioning a simple tracked component
 

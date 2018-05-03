@@ -36,7 +36,7 @@ It's free for open source, and always will be.
 
 We assume familiarity with JavaScript and React.
 
-Before starting this tutorial, please [Install Bit](/docs/installation.html) on your computer.
+Before starting this tutorial, please [Install Bit](/docs/installing-bit.html) on your computer.
 If you have already installed Bit, please verify the installation by running the following command:
 
 ```bash

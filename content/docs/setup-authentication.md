@@ -18,34 +18,61 @@ Before working with [bitsrc.io](https://bitsrc.io) you will first need to config
 
 To set your username and email in Bit, use the [bit config command](/docs/cli-config.html).
 
+> **Using Git config**
+>
+> If you already have a configuration for `user.name` and `user.email` in your `git config`, Bit will automatically use the predefined properties in Git.
+
 ```bash
-bit config set user.name "mickey mouse"
-bit config set user.email mickey@example.com
+$ bit config set user.name "mickey mouse"
+$ bit config set user.email mickey@example.com
 ```
 
 ## Set up bitsrc.io connectivity
 
 ### Signup to bitsrc.io
 
-Go ahead and [create a free account](https://bitsrc.io/signup) on [bitsrc.io](https://bitsrc.io).
+[Create a free account](https://bitsrc.io/signup) on [bitsrc.io](https://bitsrc.io).
 
-### Set up SSH authentication to bitsrc.io
+## Connect Bit CLI to your Bit account
 
-[bitsrc.io](bitsrc.io) uses SSH authentication to authenticate your computer with your account, so Bit can work with your [bitsrc.io](https://bitsrc.io) Scopes.
+Bit uses SSH to authenticate a computer with your account, so Bit can authentication with the Scopes hosted on [bitsrc.io](https://bitsrc.io).
 
-SSH access to servers is already set up in most cases – and if it isn’t, it’s easy to do. 
-SSH is also an authenticated network protocol; and because it’s ubiquitous, it’s generally easy to set up and use.
+SSH access to servers is already set up in most cases – and if it isn’t, it’s easy to do. SSH is also an authenticated network protocol; and because it’s ubiquitous, it’s generally easy to set up and use.
 This makes SSH the preferred method for collaboration.
 
-To connect via SSH you will first need to generate your SSH key, and then add it to your BitSrc account.
+There are two methods to authenticate a local Bit client to your [bitsrc.io](bitsrc.io) account.
 
-If you know how to generate your SSH key, you can skip the next part and move directly to [authenticating to bitsrc.io](#authenticate-to-bitsrcio).
+- [bit login](/docs/cli-login.html) command - This generates an authentication token for your [bitsrc.io](bitsrc.io) account, configures it to the local Bit client and uses that token to initiate an SSH connection.
+- SSH key-pair - Generate an SSH key pair, upload the public part to your [bitsrc.io](bitsrc.io) account, and configure your Bit client to use the private part.
 
-## Generate SSH key
+### Authenticating Bit using 'bit login'
 
-### macOS / Linux
+To authenticate your Bit client, run the following command:
 
-To generate an SSH key simply follow these steps: 
+```bash
+$ bit login
+Your browser has been opened to visit: http://bitsrc.io/bit-login?redirect_uri=http://localhost:8085...
+```
+
+Your browser will automatically open a login page. Enter your [bitsrc.io](bitsrc.io) account credentials. The authentication token will be generated and configured to [bit config](/docs/cli-config.html).
+
+> **Logging out from Bit**
+>
+> To quickly logout from Bit, run the [bit logout](/docs/cli-logout.html) command.
+
+#### Managing your authentication devices
+
+If you used [bit login](/docs/cli-login.html) to authenticate a Bit client with a [Bit](bitsrc.io) account, you can see a list of all logged in devices in the [profile settings](https://bitsrc.io/settings).
+
+Here you can remove tokens, thus forcing Bit clients to re-authenticate themselves with your account.
+
+### Authenticating Bit using SSH key-pair
+
+If you know how to generate your SSH key, you can skip the next part and move directly to [authenticate your SSH Key to bitsrc.io](#upload-public-ssh-key-to-bitsrcio).
+
+#### Generate SSH key for macOS/Linux
+
+To generate an SSH key follow these steps:
 
 1. Open a terminal application.
 2. Run this command (replace ‘email’ with the email associated with your BitSrc account):
@@ -59,18 +86,18 @@ Start the SSH agent: `eval "$(ssh-agent -s)"`
 
 Add the private key we’ve created in the last step: `ssh-add ~/.ssh/id_rsa`
 
-### Windows
+#### Generate SSH key for Windows
 
 To generate an SSH key, please follow these steps:
 
-1. Download and start the [puttygen.exe] generator (https://winscp.net/eng/docs/ui_puttygen).
+1. Download and start the [puttygen.exe generator](https://winscp.net/eng/docs/ui_puttygen).
 2. In the "Parameters" section choose **SSH2 DSA** and press **Generate**.
 3. Move your mouse on the small screen in order to generate the key pairs.
 4. Enter a key comment, which will identify the key (useful when you use several SSH keys).
 5. Click "Save private key" to save your private key.
 6. Click "Save public key" to save your public key.
 
-## Authenticate to bitsrc.io
+#### Upload public SSH key to bitsrc.io
 
 1. First, you should log in to your [bitsrc.io](https://bitsrc.io/login) account.
 2. Click on your user icon to open your user actions menu:

@@ -12,7 +12,7 @@ Removes a component - will delete a specific version, or the entire component an
 ## Synopsis
 
 ```bash
-bit remove|rm [-r|--remote] [-f|--force] [-d|--delete-files] [-t|--track] <ids...>
+bit remove|rm [-r|--remote] [-f|--force] [-d|--delete-files] [-s|--silent] [-t|--track] <ids...>
 ```
 
 ## Examples
@@ -92,11 +92,19 @@ bit remove foo/bar --track
 >
 > If you've [tracked](/docs/isolating-and-tracking-components.html) and [tagged](/docs/versioning-tracked-components.html) two components, and one depends on the other, removing it will remove its dependency as well.
 
+#### Silently approves remove confirmation message
+
+Accept the `remove` prompt, without using `--force`.
+
+```bash
+bit remove foo/bar --silent
+```
+
 ## Options
 
 **-r, --remote**
 
-Remove the component from a remote Scope. 
+Remove the component from a remote Scope.
 
 ```bash
 bit remove foo/bar --remote
@@ -124,4 +132,12 @@ Keep tracking the component
 
 ```bash
 bit remove foo/bar --track
+```
+
+**-s, --silent**
+
+Skip remove confirmation
+
+```bash
+bit remove foo/bar --silent
 ```
