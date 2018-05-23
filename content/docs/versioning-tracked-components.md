@@ -99,7 +99,7 @@ Components that depend on other components, such as [this example](/docs/isolati
 
 For example, when component `foo` requires component `bar`, and both are in the same project, and the component `bar` is modified - `foo` will be marked as modified as well, when we run the [bit status](/docs/cli-status.html) command. However, the component's source code hasn't changed at all, but rather its dependency graph has.
 
-This is a very basic example, but the same principal applies when there are multiple levels of dependencies between components. Bit will understand how a modification to any component on the dependency graph of the project will affect the rest of the components used, and prompt to [tag](/docs/cli-tag.html) the changes.
+This is a very basic example, but the same principle applies when there are multiple levels of dependencies between components. Bit will understand how a modification to any component on the dependency graph of the project will affect the rest of the components used, and prompt to [tag](/docs/cli-tag.html) the changes.
 
 For example, let's assume the following project structure and components.
 
