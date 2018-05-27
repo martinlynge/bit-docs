@@ -151,10 +151,10 @@ Bit has multiple build environments and bundlers available for your use, hosted 
 Add an environment by using the [Import](/docs/cli-import.html#import-a-single-component-from-a-remote-scope) command suffixed with the relevant flag. This will ensure all components in your local scope will have the same  environment.
 
 ```bash
-$ bit import bit.envs/bundlers/webpack -c
+$ bit import bit.envs/compilers/react -c
 
 the following component environments were installed
-- bit.envs/bundlers/webpack@0.0.6
+- bit.envs/compilers/react@0.0.13
 ```
 
 ### Build your component
