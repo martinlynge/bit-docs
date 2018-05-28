@@ -4,9 +4,9 @@
         "tester": "none"
     },
     "dependencies": {
-        "bit.docs/content/tutorial": "0.0.5",
+        "bit.docs/content/tutorial": "0.0.8",
         "bit.docs/content/community": "0.0.3",
-        "bit.docs/content/docs": "0.0.12"
+        "bit.docs/content/docs": "0.0.15"
     },
     "componentsDefaultDirectory": "{namespace}/{name}",
     "packageManager": "npm"

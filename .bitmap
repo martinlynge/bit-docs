@@ -59,7 +59,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/community"
     },
-    "bit.docs/content/tutorial@0.0.7": {
+    "bit.docs/content/tutorial@0.0.8": {
         "files": [
             {
                 "name": "index.js",
@@ -82,7 +82,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/tutorial"
     },
-    "bit.docs/content/docs@0.0.13": {
+    "bit.docs/content/docs@0.0.15": {
         "files": [
             {
                 "name": "authentication-issues.md",
@@ -385,5 +385,5 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/docs"
     },
-    "version": "0.12.12"
+    "version": "0.12.13"
 }
