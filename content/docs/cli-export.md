@@ -39,7 +39,11 @@ bit export [Scope name] [component id 1] [component id 2]
 
 In some workflows or cases, you may wish to remove a component from your repository's source-code and consume it as a dependency using common package managers such as NPM or Yarn after exporting it to a remote Scope. In order to do that, use the `--eject` flag.
 
+<<<<<<< HEAD
 ```sh
+=======
+```bash
+>>>>>>> 2904e66603b36d1600b164836926c30ef364a730
 bit export bit.examples string/pad-left --eject
 ```
 
@@ -57,6 +61,6 @@ bit export bit.examples string/pad-left --eject
 
 Remove the component from the repository and consume it as a dependency using a common package manager.
 
-```sh
-bit export string/pad-left bit.examples --eject
+```bash
+bit export bit.examples string/pad-left --eject
 ```
