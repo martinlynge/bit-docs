@@ -4,7 +4,7 @@ title: Installing components
 permalink: docs/install-components.html
 layout: docs
 category: Troubleshooting
-prev: authentication-issues.html
+prev: troubleshooting-isolating.html
 next: clearing-bit-cache.html
 ---
 

@@ -12,7 +12,7 @@ Initializes an empty Bit Scope. This will create a `bit.json` file, and a `.bit`
 ## Synopsis
 
 ```bash
-bit init [-b|--bare] [-s|--shared <group-name>] [-t|--standalone]
+bit init [-b|--bare] [-s|--shared <group-name>] [-t|--standalone] [--reset] [--reser-hard]
 ```
 
 ## Options
@@ -39,4 +39,22 @@ Creates the [component store](/docs/initializing-bit.html#component-store) outsi
 
 ```bash
 bit init --standalone
+```
+
+**--reset**
+
+Resets a local scope to its initial state. Use this in case you have any corrupted data.
+
+```bash
+bit init --reset
+```
+
+**--reset-hard**
+
+Removes Bit completely from a local workspace. Use this in case you want to completely remove Bit from your project.
+
+This will delete `.bitmap`, `bit.json` and `.bit`.
+
+```bash
+bit init --reset-hard
 ```

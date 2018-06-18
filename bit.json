@@ -1,8 +1,5 @@
 {
-    "env": {
-        "compiler": "none",
-        "tester": "none"
-    },
+    "env": {},
     "dependencies": {
         "bit.docs/content/tutorial": "0.0.8",
         "bit.docs/content/community": "0.0.3",

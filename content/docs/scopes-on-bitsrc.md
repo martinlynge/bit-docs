@@ -4,6 +4,7 @@ title: Scopes On Bitsrc
 permalink: docs/scopes-on-bitsrc.html
 layout: docs
 prev: my-account.html
+next: bitsrc-plans.html
 ---
 
 Scopes are distributed by nature. Setting up a free (forever for open source) remote Scope on [bitsrc.io](bitsrc.io) is quick and provides many advantages - but you can also choose to set up a remote Scope on your local machine.

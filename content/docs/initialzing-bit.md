@@ -18,7 +18,17 @@ bit init
 
 Initializing Bit adds several resources to your project, including Bit's main configuration file [bit.json](/docs/conf-bit-json.html), Bit's [local Scope](/docs/initializing-bit.html#bit-local-scope) and an internal component mapping file called [.bitmap](/docs/initializing-bit.html#bitmap).
 
-## Bit local Scope
+### Recreates Bit resources in case of corrupted data
+
+If an error caused a corrupted data in your workspace files, and you need to recreate them, add the `--reset` flag to the `init` command.
+
+```bash
+bit init --reset
+```
+
+## The contents of a workspace with a Bit Scope
+
+### Bit local Scope
 
 Bit's local Scope is used as an internal store for Bit objects (components, `bit tags`, etc).  
 The local Scope is nested within a directory called `.bit`. If you use [Git](git-scm.com), Bit will create its local Scope under the `.git` directory. This makes Bit work seamlessly with Git and ensures that Git does not track the local Scope's contents.
@@ -32,7 +42,7 @@ bit init --standalone
 >
 > When you initialize Bit with the `--standalone` flag or if you are working with an SCM other than Git, ensure your SCM ignores the `.bit` directory, so its contents is not tracked for changes.
 
-## bit.json
+### bit.json
 
 [bit.json](/docs/conf-bit-json.html) is Bit's main configuration file. Use it to configure default naming conventions, extensions, etc.
 
@@ -40,7 +50,7 @@ This file should be tracked and managed by your SCM, alongside your project.
 
 Learn more about `bit.json` configurations [here](/docs/conf-bit-json.html).
 
-## .bitmap
+### .bitmap
 
 `.bitmap` is Bit's locations and paths file, it is used to map the paths of your tracked components and their dependent files.
 

@@ -41,7 +41,13 @@ First of all, let's take a look at the file:
                 "core": true
             }
         }
-    }
+    },
+    "resolveModules": {
+        "modulesDirectories": ["src"],
+        "aliases": {
+            "@": "someDir"
+        }
+    },
 }
 ```
 
@@ -65,7 +71,7 @@ Compilers and testers are not configured manually, but rather by [importing](/do
 "saveDependenciesAsComponents": "true"
 ```
 
-When you [import](/docs/importing-components.html) Bit components, they may depend on other Bit components. 
+When you [import](/docs/importing-components.html) Bit components, they may depend on other Bit components.
 Those will be installed as npm packages by default, unless you add the `saveDependenciesAsComponents` with a `true` value.
 
 ### packageManager : string
@@ -144,4 +150,11 @@ The `dist` section configures:
 ### extensions : object
 
 The `extension` section configures your [extensions](/docs/ext-concepts.html). Those will be listed here after your [import](/docs/cli-import.html#import-an-extension) them.
-The extension's configuration and options are listed for each extension. 
+The extension's configuration and options are listed for each extension.
+
+### resolveModules : object
+
+The `resolveModules` section configures custom module resolution for Bit components. This is similar to Webpack's `resolve`, and contains 2 objects:
+
+* `moduleDirectories` - Add additional paths to resolve components from.
+* `aliases` - Sets an alias for a directory.

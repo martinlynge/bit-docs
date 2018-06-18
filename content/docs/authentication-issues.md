@@ -5,7 +5,7 @@ permalink: docs/authentication-issues.html
 layout: docs
 category: Troubleshooting
 prev: latest-version.html
-next: install-components.html
+next: troubleshooting-isolating.html
 ---
 
 There are several things you can do if you encountered `fatal: permission to scope <scopename> was denied` error message.

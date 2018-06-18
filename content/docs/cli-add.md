@@ -42,7 +42,7 @@ The component namespace becomes the parent directory, and the component name bec
 >
 > Bit searches for an `index` file to be defined as the component's main file. If no such file is found, the component won't be tracked and en error message will be displayed. In order to specify a custom main file, use the `--main` flag as mentioned in the next section.
 
-### Tracking a directory as a single component, with a custom main file.
+### Tracking a directory as a single component, with a custom main file
 
 When tracking a component with multiple files, you can specify a custom main file using the `--main` flag. This is useful when:
 
@@ -265,7 +265,7 @@ In order to do that, just use the `--exclude` flag, and exclude whatever you (do
 
 You can exclude a single file.
 
-```bash 
+```bash
 bit add src/foo --exclude dont-want.js
 ```
 

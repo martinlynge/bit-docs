@@ -18,14 +18,23 @@ bit move|mv <from> <to>
 
 ## Examples
 
-Move a file that's part of a tracked component.
+### Move a file that's part of a tracked component
 
 ```bash
 bit move src/foo/bar/index.js src/components/new/location/new-file-name.js
 ```
 
-Move a directory that's part of a tracked component.
+### Move a directory that's part of a tracked component
 
 ```bash
 bit move src/foo src/components/new/location/foo
+```
+
+### Rename a component
+
+Similar to Git, you can also use `move` to rename files within a component.
+
+```bash
+$ bit move <oldDirName> <newDirName>
+$ bit move <oldFileName> <newFileName>
 ```

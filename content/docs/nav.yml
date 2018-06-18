@@ -63,9 +63,11 @@
 - title: Troubleshooting
   items:
     - id: latest-version
-      title: Install the Latest Stable Version of Bit
+      title: Install Bit's Stable Version
     - id: authentication-issues
       title: CLI Authentication Issues
+    - id: troubleshooting-isolating
+      title: Isolating Components
     - id: install-components
       title: Installing Components
     - id: clearing-bit-cache
@@ -82,6 +84,8 @@
       title: My account
     - id: scopes-on-bitsrc
       title: Scopes on bitsrc.io
+    - id: bitsrc-plans
+      title: Pricing
 - title: CLI Reference
   items:
     - id: cli-add

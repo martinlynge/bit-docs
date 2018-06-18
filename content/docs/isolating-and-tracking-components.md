@@ -247,11 +247,11 @@ This means that Bit was unable to resolve the component's required package versi
 
 As described in the [section above](/docs/isolating-and-tracking-components.html#tracking-a-component-with-package-dependencies), there are a few different strategies that Bit uses for resolving a package version. If it fails to resolve the package version, this error will be shown when using [bit status](/docs/cli-status.html) or [bit tag](/docs/cli-tag.html).
 
-To resolve this issue, please make sure the required package is either defined in the repository's package.json file or exists in the `node_modules` directory.
+To resolve this issue, please make sure the required package is either defined in the repository's `package.json` file or exists in the `node_modules` directory.
 
 > **Note**
 >
-> We highly recommend making sure package dependencies are defined in package.json to avoid unexpected package version resolution which can potentially cause inconsistencies in your application.
+> We highly recommend making sure package dependencies are defined in `package.json` to avoid unexpected package version resolution which can potentially cause inconsistencies in your application.
 
 ### Tracking a component with file dependencies
 
@@ -368,6 +368,63 @@ To validate that Bit has added `utils/noop` as a dependency, you can run the fol
 ```bash
 $ bit show hello/world
 ```
+
+### Tracking a component with a custom module resolution
+
+If you have configured custom module resolution for your application, for example - in your Webpack config, you will need to define it for Bit as well. This is so Bit will know where to look for the files your code requires.
+
+Let's take our regular example, and update it to use custom module resolution.
+
+```bash
+.
+├── bit.json
+├── package.json
+└── src
+    ├── hello-world
+    │   ├── hello-world.js
+    │   └── index.js
+    └── utils
+        └── noop.js
+
+3 directories, 5 files
+
+```
+
+`index.js`
+
+```js
+export {default} from './hello-world';
+```
+
+`hello-world.js`
+
+```js{1}
+import noop from '@/utils/noop';
+
+export default function hello(world) {
+    noop();
+    return `hello ${world}`;
+}
+```
+
+`noop.js`
+
+```js
+export default () => {};
+```
+
+If you use [bit add](/docs/cli-add.html) to track the `hello-world` component, Bit will prompt an error saying it can't find the dependency `@/utils/noop`. To resolve this, open the `bit.json` file, and add the following configuration:
+
+```js
+"resolveModules": {
+        "modulesDirectories": ["src"],
+        "aliases": {
+            "@": "src"
+        }
+    }
+```
+
+Now when you run [bit status](/docs/cli-status.html), you will see that Bit is able to find `utils/noop`, and marks it as an untracked file. So all is left is to track `noop` as [shown here](#track-an-untracked-file-dependency-as-a-component-dependency).
 
 ## Tracking a component with test/spec files
 
