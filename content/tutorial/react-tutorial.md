@@ -358,7 +358,7 @@ successfully initialized an empty bit workspace.
 Use the `bit import` command to source your component to the project.
 
 ```bash
-$ bit import wonderwoman.diana/ui/button --path src/components
+$ bit import wonderwoman.diana/ui/button --path src/components/ui/button
 
 successfully ran npm install at /Users/../tutorial-react/import-button/src/components
 
