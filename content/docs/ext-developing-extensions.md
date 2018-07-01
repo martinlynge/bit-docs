@@ -24,7 +24,7 @@ This function allows us to add additional dynamic configuration for the extensio
 It's invoked before [init](#init) and receives a config object (the [extension's configuration](/docs/ext-concepts.html#configuration) as specified in the [bit.json](/docs/conf-bit-json.html#extensions--object)). It returns a new config object which is then passed on to [init](#init).
 
 ```js
-const getDynamicConfig = (rawConfig, dynamicConfig) => {
+const getDynamicConfig = ({ rawConfig }) => {
      return Object.assign({}, rawConfig, { dynamicConfigKey: 'dynamicConfigVal' })
 };
 ```
@@ -34,7 +34,7 @@ const getDynamicConfig = (rawConfig, dynamicConfig) => {
 The `init` function is in charge of initializing the extension. It receives a config object (the [extension's configuration](/docs/ext-concepts.html#configuration) as specified in the [bit.json](/docs/conf-bit-json.html#extensions--object)), a [dynamicConfig object](#getDynamicConfig), and an api object, which exposes [Bit's extensions API](#bits-extensions-api).
 
 ```js
-const init = (rawConfig, dynamicConfig, api) => {
+const init = ({ rawConfig, dynamicConfig, api} ) => {
   // Init code here...
 };
 ```

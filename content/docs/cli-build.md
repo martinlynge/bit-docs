@@ -12,7 +12,7 @@ Builds a component (or all the project's components) with the configured compile
 ## Synopsis
 
 ```bash
-bit build [-v|--verbose] [id]
+bit build [-v|--verbose] [-c|--no-cache] [id]
 ```
 
 ## Examples
@@ -37,4 +37,12 @@ Shows npm verbose output for inspection.
 
 ```bash
 bit build foo/bar --verbose
+```
+
+**-c, --no-cache**
+
+Ignore component dist cache when building component
+
+```bash
+bit build --no-cache
 ```

@@ -86,6 +86,8 @@
       title: Scopes on bitsrc.io
     - id: bitsrc-plans
       title: Pricing
+    - id: bitsrc-security
+      title: Security and Data Policy
 - title: CLI Reference
   items:
     - id: cli-add

@@ -29,7 +29,7 @@ Extensions' configuration and options are part of the [bit.json](/docs/conf-bit-
 ```json
 "extensions": {
         "ext-docs-parser": {
-            "config": {},
+            "rawConfig": {},
             "options": {
                 "core": true
             }

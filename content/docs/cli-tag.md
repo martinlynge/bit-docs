@@ -12,7 +12,7 @@ Locks the version of a 'new' or 'modified' component(s). Component's status will
 ## Synopsis
 
 ```bash
-bit tag|t [id] [version] [-m|--message <message>] [-a|--all] [-b|--scope <scope-name>] [-p|--patch] [-mi|--minor] [-ma|--major] [-f|--force] [-v|--verbose] [-i|--ignore-missing-dependencies]
+bit tag|t [id] [version] [-m|--message <message>] [-a|--all] [-b|--scope <scope-name>] [-p|--patch] [-mi|--minor] [-ma|--major] [-f|--force] [-v|--verbose] [-i|--ignore-missing-dependencies] [--skip-tests]
 ```
 
 ## Examples
@@ -173,4 +173,12 @@ Ignore missing package and file dependencies.
 
 ```bash
 bit tag foo/bar --ignore-missing-dependencies
+```
+
+**--skip-tests**
+
+Skip testing components when tagging a new version.
+
+```bash
+bit tag --skip-tests
 ```

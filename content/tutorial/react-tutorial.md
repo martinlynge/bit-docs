@@ -138,7 +138,7 @@ A React component needs to be compiled so it can run on a browser.
 
 A *built* component can then be [consumed as a node module](/docs/installing-components-using-package-managers.html) directly from [bitsrc.io](https://bitsrc.io) using NPM or Yarn.
 
-The React component you are using needs to be compiled, for this tutorial we'll use a **bundler**. A bundler is a type of a compiler. 
+The React component you are using needs to be compiled, for this tutorial we'll use a **bundler**. A bundler is a type of a compiler.
 
 Bit has multiple build environments and bundlers available for your use, hosted as Bit components in a Scope called ["envs"](https://bitsrc.io/bit/envs).
 

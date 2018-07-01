@@ -12,7 +12,7 @@ Runs the tests of the specified component(s) using the configured tester.
 ## Synopsis
 
 ```bash
-bit test|t [-v|--verbose] [id]
+bit test|t [-v|--verbose] [--include-unmodified] [id]
 ```
 
 ## Examples
@@ -37,4 +37,12 @@ Shows npm verbose output for inspection.
 
 ```bash
 bit test foo/bar --verbose
+```
+
+**--include-unmodified**
+
+Test all components in Scope, including components with no modifications.
+
+```bash
+bit test --include-unmodified
 ```
