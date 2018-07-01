@@ -89,7 +89,7 @@ tracking 3 new components
 
 Bit supports managing build and test tasks for each component. You can add a Bit build/test task to your project, and they will be set and run for each tracked component.
 
-Read more about adding [build environment](docs/building-components.html) and [test environment](docs/testing-components.html) to your project.
+Read more about adding [build environment](/docs/building-components.html) and [test environment](/docs/testing-components.html) to your project.
 
 Here is a list of [curated build and test environments](https://bitsrc.io/bit/envs), for you to get started quickly.
 
