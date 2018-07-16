@@ -13,7 +13,7 @@ If you are experiencing issues when using an old version of Bit, please try inst
 
 ```bash
 $ bit -V
-13.0.1
+13.0.3
 ```
 
 ## Update version

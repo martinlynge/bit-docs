@@ -8,16 +8,18 @@ prev: testing-components.html
 next: removing-components.html
 ---
 
-Rendering allows other users to interact with your Scoped component(s), directly at [bitsrc.io](https://bitsrc.io).   
+Rendering allows other users to interact with your Scoped component(s), directly at [bitsrc.io](https://bitsrc.io).  
 See an example of a rendered component [here](https://bitsrc.io/bit/movie-app/components/hero).
 
 ## How Does it Work?
+
 - Add annotations to your component, documenting how it should be rendered.
 - Bundle your component as a [UMD](https://github.com/umdjs/umd) using bundler. You can use one of Bit’s existing bundlers, see [Building Components](docs/building-components.html).
 - [Tag](/docs/cli-tag.html) & [Export](/docs/cli-export.html) your component.
 - Preview your component in your bitsrc.io [Scope](docs/scopes-on-bitsrc.html).
 
 ### Annotations
+
 Some [JSDocs](http://usejsdoc.org/about-getting-started.html#adding-documentation-comments-to-your-code) annotations needs to be added to your component, for example:
 
 ```js
@@ -35,22 +37,37 @@ class Hero() {
 ```
 
 Use the following annotations:
+
 #### @render react
+
 Specify the renderer for the component. Renderers are Bit components, note that currently only "`react`" is supported.
 additional platforms support is coming soon...
+
 #### @name <NAME>
+
 Specify the component’s name, to make sure it will work correctly when the code is minified.
+
+> **Note**
+>
+> When using `export default` in a component, set a `@name` property to be used in the `@xample`.
+
 #### @example
+
 Specify how to render the component.
+
 ### Bundlers
+
 To render your component, bundle it as a [UMD](https://github.com/umdjs/umd).  
 `UMD` is a Javascript standard that works in the browser, in Nodejs, and in your workspace.
+
 #### Bundling components
+
 To bundle your component, use a bundler webpack which is a type of a [compiler](/docs/ext-compiling.html). You can use one of Bit bundlers avilable at the [Bit envs Scope](https://bitsrc.io/bit/envs/).  
 Note that the React bundler comes in 2 configurations:  
+
 - [with](https://bitsrc.io/bit/envs/bundlers/webpack) css modules.
-- [without](https://bitsrc.io/bit/envs/bundlers/webpack-css-modules) css modules.   
- 
+- [without](https://bitsrc.io/bit/envs/bundlers/webpack-css-modules) css modules.
+
 You can extend or modify bundlers according to your needs. Learn more [here](/docs/building-components.html).
 
 Bit bundles the component as an isolated environment **without** the component’s dependencies, making it slim and efficient.
@@ -67,11 +84,11 @@ import HeroButton from '../hero-button';
 
 However, when you consume the **HeroButton** component from the package manager, the **Hero** component will be bundled without it, which is easier to use and maintain:
 
-```js 
+```js
 import HeroButton from '@bit/bit.movie-app.components.hero-button';
 ```
 
-### Adding a bundler to an existing component 
+### Adding a bundler to an existing component
 
 **For an imported component** - [import](/docs/updating-sourced-components.html) the component using the `--conf` flag, so the component will have its own [bit.json](/docs/conf-bit-json.html) file. Set a compiler in the `bit.json`.
 
@@ -81,7 +98,7 @@ bit import bit.movie-app/components/hero-button --conf
 
 Open your IDE and set the compiler id in your component’s `bit.json` file:
 
-```js 
+```js
 "env": {
     "compiler": "bit.envs/bundlers/webpack@0.0.6",
     "tester": "bit.envs/testers/karma-mocha-react@0.0.18"
@@ -95,13 +112,43 @@ Open your IDE and set the compiler id in your component’s `bit.json` file:
 bit import bit.envs/bundlers/webpack -c
 ```
 
+## Many exports in a rendering example
+
+If your component exports more than one render function, for example:
+
+```js
+export default () => <div>Main component</div>; 
+
+export const Secondary = () => <div>secondary mon</div>;
+```
+
+You can use each function name in the `@example` to render it. If you use `export default` as well, you will need to define the `@name` JSDoc annotation, to set a name to it, to be rendered in the playground.  
+So if we take the previous example, this is how we would add the right anontations to have a working playgroud with both render functions.
+
+```js
+/**
+ * @render react
+ * @name Main
+ * @example
+ * <div>
+ * 	<Main/>
+ * 	<Secondary/>
+ * </div>
+ */
+export default () => <div>Main component</div>;
+
+export const Secondary = () => <div>secondary mon</div>;
+```
+
 ## Injecting Dependencies
+
 Bitsrc.io aspires to provide the component all the dependncies needed for preview.
 Errors will be displayed at the preview frame. Mosr errors occur because there was a problem in the bundle itself.
 
 ## Troubleshooting
 
 When the preview is not working try the following:
+
 - Open dev console and look for errors.
 - Verify the bundle work by importing it locally, from another file.
 - Manually check that the bundling worked - check out the `dist` directory, see that the file is formatted correctly.

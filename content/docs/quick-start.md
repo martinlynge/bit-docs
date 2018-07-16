@@ -8,6 +8,13 @@ next: installing-bit.html
 ---
 Learn the basics of working with Bit in your own projects.
 
+> **Are you getting 404's?**
+>
+> Due to the [compromised version of eslint-scope](https://status.npmjs.org/incidents/dn7c1fgrr7ng) that was released earlier today, we have decided to invalidate all Bit tokens issued before 2018-07-12, eliminating the possibility of compromised tokens, as Bit leverages the .npmrc file to store its token for accessing the @bit node module registry.
+>
+> **To generate a new token**, please run `bit logout` followed by `bit login`.  
+> If you are using npm/Yarn run `npm login --registry=https://node.bitsrc.io --scope=@bit`
+
 To start, choose an existing repository containing components or modules you’d like to share in other projects. We’ll learn how to use Bit to make these components available to use and even develop from other repositories.
 
 You can also use one of our [example projects](/docs/quick-start.html#example-projects), but we recommend starting with your own code.

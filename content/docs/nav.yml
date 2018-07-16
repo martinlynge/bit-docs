@@ -38,6 +38,8 @@
       title: Bit Basics
     - id: faq-how-do-i-work-with-bit
       title: How Do I...
+    - id: faq-component-dependencies
+      title: Component Dependencies
 - title: Extending Bit
   items:
     - id: ext-concepts

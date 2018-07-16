@@ -10,6 +10,13 @@ next: clearing-bit-cache.html
 
 There are several issues you may encounter when you install or import a component from [bitsrc.io](bitsrc.io).
 
+> **Are you getting 404's?**
+>
+> Due to the [compromised version of eslint-scope](https://status.npmjs.org/incidents/dn7c1fgrr7ng) that was released earlier today, we have decided to invalidate all Bit tokens issued before 2018-07-12, eliminating the possibility of compromised tokens, as Bit leverages the `.npmrc` file to store its token for accessing the @bit node module registry.
+>
+> **To generate a new token**, please run `bit logout` followed by `bit login`.  
+> If you are using npm/Yarn run `npm login --registry=https://node.bitsrc.io --scope=@bit`
+
 ## NPM or Yarn throws 'package not found' when importing a component
 
 If you are importing a component using `bit import`, and you get a message similar to these:

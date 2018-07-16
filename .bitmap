@@ -59,7 +59,30 @@
         "origin": "IMPORTED",
         "originallySharedDir": "content/community"
     },
-    "bit.docs/content/docs@0.0.20": {
+    "bit.docs/content/tutorial@0.0.11": {
+        "files": [
+            {
+                "name": "index.js",
+                "relativePath": "index.js",
+                "test": false
+            },
+            {
+                "name": "nav.yml",
+                "relativePath": "nav.yml",
+                "test": false
+            },
+            {
+                "name": "react-tutorial.md",
+                "relativePath": "react-tutorial.md",
+                "test": false
+            }
+        ],
+        "mainFile": "index.js",
+        "rootDir": "content/tutorial",
+        "origin": "IMPORTED",
+        "originallySharedDir": "content/tutorial"
+    },
+    "bit.docs/content/docs@0.0.21": {
         "files": [
             {
                 "name": "authentication-issues.md",
@@ -361,29 +384,6 @@
         "rootDir": "content/docs",
         "origin": "IMPORTED",
         "originallySharedDir": "content/docs"
-    },
-    "bit.docs/content/tutorial@0.0.11": {
-        "files": [
-            {
-                "name": "index.js",
-                "relativePath": "index.js",
-                "test": false
-            },
-            {
-                "name": "nav.yml",
-                "relativePath": "nav.yml",
-                "test": false
-            },
-            {
-                "name": "react-tutorial.md",
-                "relativePath": "react-tutorial.md",
-                "test": false
-            }
-        ],
-        "mainFile": "index.js",
-        "rootDir": "content/tutorial",
-        "origin": "IMPORTED",
-        "originallySharedDir": "content/tutorial"
     },
     "version": "13.0.1"
 }

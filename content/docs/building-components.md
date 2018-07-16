@@ -16,7 +16,7 @@ In order to build a component, you need to have a compiler defined.
 
 ### Defining a default compiler for your project
 
-A compiler is defined per [Scope](/docs/scopes-on-bitsrc.html). Once defined, building a component within that Scope will build the component using the defined compiler.
+A compiler is defined per workspace. Once defined, building a component within that workspace will build the component using the defined compiler.
 In order to do that, just [import the compiler](/docs/cli-import.html#import-a-new-environment):
 
 ```bash
