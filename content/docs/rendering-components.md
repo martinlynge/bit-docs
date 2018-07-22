@@ -143,7 +143,7 @@ export const Secondary = () => <div>secondary mon</div>;
 ## Injecting Dependencies
 
 Bitsrc.io aspires to provide the component all the dependncies needed for preview.
-Errors will be displayed at the preview frame. Mosr errors occur because there was a problem in the bundle itself.
+Errors will be displayed at the preview frame. Most errors occur because there was a problem in the bundle itself.
 
 ## Troubleshooting
 
