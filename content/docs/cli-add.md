@@ -206,7 +206,7 @@ The components created will be: `one/first`, `one/second`, `two/third`, `src/fou
 You can specify which files are the test files, so bit can later test the component.
 
 ```bash
-bit add src/foo/bar.js --test 'src/foo/bar.spec.js'
+bit add src/foo/bar.js --tests 'src/foo/bar.spec.js'
 ```
 
 This will create a component with the id `foo/bar`, with two files: `bar.js` as the main file, and `bar.spec.js` as the test file.
@@ -226,7 +226,7 @@ Now, let's say this is our file structure:
 You can specify a whole folder of test files.
 
 ```bash
-bit add src/foo --test 'src/foo/tests/*'
+bit add src/foo --tests 'src/foo/tests/*'
 ```
 
 ### Tracking components for each sub-directory, and tests from a separate directory tree
@@ -253,7 +253,7 @@ Now this is a common one: your code is under `src` folder, and your tests are un
 Fortunately enough, you can use our [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), which supports `PARENT` and `FILE_NAME`.
 
 ```bash
-bit add src/**/* --test 'tests/{PARENT}/{FILE_NAME}.spec.js'
+bit add src/**/* --tests 'tests/{PARENT}/{FILE_NAME}.spec.js'
 ```
 
 This will create four components: `utils/left-pad`, `utils/curry`, `components/nav-bar`, `components/button`. Each component will have one main file and one test file - the corresponding one from the tests folder.
@@ -325,25 +325,25 @@ Specify a test file, test files directory, or tests path using our [DSL](https:/
 Track a component with a test file.
 
 ```bash
-bit add src/foo/bar.js --test src/foo/bar.specs.js
+bit add src/foo/bar.js --tests src/foo/bar.specs.js
 ```
 
 Track a component with a directory of test files
 
 ```bash
-bit add src/foo --test src/foo/tests/*
+bit add src/foo --tests src/foo/tests/*
 ```
 
 Track a component with a test file from another directory
 
 ```bash
-bit add src/foo/bar.js --test "test/{FILE_NAME}.spec.js"
+bit add src/foo/bar.js --tests "test/{FILE_NAME}.spec.js"
 ```
 
 Track a component with test files from a parallel directory tree
 
 ```bash
-bit add src/foo/bar.js --test "test/{PARENT}/{FILE_NAME}.spec.js"
+bit add src/foo/bar.js --tests "test/{PARENT}/{FILE_NAME}.spec.js"
 ```
 
 **-n, --namespace <namespace>**
